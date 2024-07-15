@@ -1,0 +1,260 @@
+#
+#
+#               FlowerHub made by Emmiesa | tablist.yml
+#
+#
+TABLIST:
+  ENABLE: true
+  TYPE: "CUSTOM" #Available types: VANILLA, CUSTOM
+  PING: -1
+  PLAYER_PREFIX: "&a"
+  HEADER:
+    - "&dFlowerHub &fwas made by &dEmmiesa&f."
+  FOOTER:
+    - "&fYou're playing &deu-hub-1 &fon &dflower.club&f!"
+    - ""
+  LINES:
+    LEFT:
+      '1':
+        TEXT: ''
+        HEAD: ''
+      '2':
+        TEXT: ''
+        HEAD: ''
+      '3':
+        TEXT: ''
+        HEAD: ''
+      '4':
+        TEXT: ''
+        HEAD: ''
+      '5':
+        TEXT: ''
+        HEAD: ''
+      '6':
+        TEXT: '&dYou&f: %player_name%'
+        HEAD: '%PLAYER%'
+      '7':
+        TEXT: ''
+        HEAD: ''
+      '8':
+        TEXT: ''
+        HEAD: ''
+      '9':
+        TEXT: ''
+        HEAD: ''
+      '10':
+        TEXT: '&dKitPvP &f(%bungee_eupractice%)'
+        HEAD: ''
+      '11':
+        TEXT: '&dStatus&f: %pinger_isonline_localhost:25565%'
+        HEAD: ''
+      '12':
+        TEXT: ''
+        HEAD: ''
+      '13':
+        TEXT: ''
+        HEAD: ''
+      '14':
+        TEXT: ''
+        HEAD: ''
+      '15':
+        TEXT: ''
+        HEAD: ''
+      '16':
+        TEXT: ''
+        HEAD: ''
+      '17':
+        TEXT: ''
+        HEAD: ''
+      '18':
+        TEXT: '&dDiscord'
+        HEAD: '%DISCORD%'
+      '19':
+        TEXT: '&fdsc.gg/emmiesa'
+        HEAD: ''
+      '20':
+        TEXT: ''
+        HEAD: ''
+    MIDDLE:
+      '1':
+        TEXT: ''
+        HEAD: ''
+      '2':
+        TEXT: '&dFlower Club'
+        HEAD: ''
+      '3':
+        TEXT: '&dOnline&f: %bungee_total%/2000'
+        HEAD: ''
+      '4':
+        TEXT: ''
+        HEAD: ''
+      '5':
+        TEXT: ''
+        HEAD: ''
+      '6':
+        TEXT: '&dRank&f: %flower_rank_raw%'
+        HEAD: ''
+      '7':
+        TEXT: ''
+        HEAD: ''
+      '8':
+        TEXT: ''
+        HEAD: ''
+      '9':
+        TEXT: ''
+        HEAD: ''
+      '10':
+        TEXT: '&dSkyWars &f(%bungee_SkyWars%)'
+        HEAD: ''
+      '11':
+        TEXT: '&dStatus&f: %pinger_isonline_localhost:25565%'
+        HEAD: ''
+      '12':
+        TEXT: ''
+        HEAD: ''
+      '13':
+        TEXT: ''
+        HEAD: ''
+      '14':
+        TEXT: '&dHubs &f(%math_0:0_{bungee_eu-hub-1}+{bungee_eu-hub-2}%)'
+        HEAD: ''
+      '15':
+        TEXT: '&dStatus&f: %pinger_isonline_localhost:25577%'
+        HEAD: ''
+      '16':
+        TEXT: ''
+        HEAD: ''
+      '17':
+        TEXT: ''
+        HEAD: ''
+      '18':
+        TEXT: '&dStore'
+        HEAD: '%STORE%'
+      '19':
+        TEXT: '&fstore.flower.club'
+        HEAD: ''
+      '20':
+        TEXT: ''
+        HEAD: ''
+    RIGHT:
+      '1':
+        TEXT: ''
+        HEAD: ''
+      '2':
+        TEXT: ''
+        HEAD: ''
+      '3':
+        TEXT: ''
+        HEAD: ''
+      '4':
+        TEXT: ''
+        HEAD: ''
+      '5':
+        TEXT: ''
+        HEAD: ''
+      '6':
+        TEXT: '&dPing&f: %player_ping%ms'
+        HEAD: ''
+      '7':
+        TEXT: ''
+        HEAD: ''
+      '8':
+        TEXT: ''
+        HEAD: ''
+      '9':
+        TEXT: ''
+        HEAD: ''
+      '10':
+        TEXT: '&dEU Practice&f: (%bungee_eupractice%)'
+        HEAD: ''
+      '11':
+        TEXT: '&dStatus&f: %pinger_isonline_localhost:25565%'
+        HEAD: ''
+      '12':
+        TEXT: ''
+        HEAD: ''
+      '13':
+        TEXT: ''
+        HEAD: ''
+      '14':
+        TEXT: ''
+        HEAD: ''
+      '15':
+        TEXT: ''
+        HEAD: ''
+      '16':
+        TEXT: ''
+        HEAD: ''
+      '17':
+        TEXT: ''
+        HEAD: ''
+      '18':
+        TEXT: '&dTwitter'
+        HEAD: '%TWITTER%'
+      '19':
+        TEXT: 'twitter.flower.club'
+        HEAD: ''
+      '20':
+        TEXT: ''
+        HEAD: ''
+    FAR_RIGHT:
+      '1':
+        TEXT: ''
+        HEAD: ''
+      '2':
+        TEXT: ''
+        HEAD: ''
+      '3':
+        TEXT: ''
+        HEAD: ''
+      '4':
+        TEXT: ''
+        HEAD: ''
+      '5':
+        TEXT: ''
+        HEAD: ''
+      '6':
+        TEXT: ''
+        HEAD: ''
+      '7':
+        TEXT: ''
+        HEAD: ''
+      '8':
+        TEXT: ''
+        HEAD: ''
+      '9':
+        TEXT: ''
+        HEAD: ''
+      '10':
+        TEXT: ''
+        HEAD: ''
+      '11':
+        TEXT: ''
+        HEAD: ''
+      '12':
+        TEXT: ''
+        HEAD: ''
+      '13':
+        TEXT: ''
+        HEAD: ''
+      '14':
+        TEXT: ''
+        HEAD: ''
+      '15':
+        TEXT: ''
+        HEAD: ''
+      '16':
+        TEXT: ''
+        HEAD: ''
+      '17':
+        TEXT: ''
+        HEAD: ''
+      '18':
+        TEXT: '&dWebsite'
+        HEAD: ''
+      '19':
+        TEXT: '&fwww.flower.club'
+        HEAD: ''
+      '20':
+        TEXT: ''
+        HEAD: ''

@@ -1,0 +1,311 @@
+#
+#
+#               FlowerHub made by Emmiesa | menus.yml
+#
+#
+menus: #These usually do not require a reload. It should update once you save this file and re-open the menu.
+#
+#-------------------------
+#      ServerSelector
+#-------------------------
+#
+  server_selector:
+    title: "&bServers » Main"
+    size: 27 #(9 = 1 ; 18 = 2 ; 27 = 3 ; 36 = 4 ; 45 = 5 ; 54 = 6 ; ect...)
+    refill-glass:
+      item-title: "&r "
+      enabled: true
+      data: 15
+      slots:
+        - "0"
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
+        - "7"
+        - "8"
+        - "9"
+        - "10"
+        - "11"
+        #- "12"
+        - "13"
+        #- "14"
+        - "15"
+        - "16"
+        - "17"
+        - "18"
+        - "19"
+        - "20"
+        - "21"
+        - "22"
+        - "23"
+        - "24"
+        - "25"
+        - "26"
+    servers:
+      practice:
+        name: "&b&lPractice"
+        slot: 12
+        material: DIAMOND_SWORD
+        data: 0
+        lore:
+          - "&7&o1v1s, Parties, Events"
+          - "&7&o15+ Games & Duels"
+          - " "
+          - "&fPlayers: &b%math_0:0_{bungee_eu-practice}+{bungee_na-practice}+{bungee_aspractice}%"
+          - " "
+          - "&bClick to view!"
+        command: "subselectorone"
+      minigames:
+        name: "&b&lMinigames"
+        slot: 14
+        material: REDSTONE
+        data: 0
+        lore:
+          - "&7Variety of gamemodes"
+          - " "
+          - "&fPlayers: &b%math_0:0_{bungee_eu-sg-1}+{bungee_eu-psg-1}+{bungee_eu-um-1}+{bungee_eu-ug-1}%"
+          - " "
+          - "&bClick to view!"
+        command: "subselectortwo"
+#
+#-------------------------
+#      HubSelector
+#-------------------------
+#
+  hub_selector:
+    title: "&bServers » Hubs"
+    size: 9 #(9 = 1 ; 18 = 2 ; 27 = 3 ; 36 = 4 ; 45 = 5 ; 54 = 6 ; ect...)
+    refill-glass:
+      enabled: true
+      item-title: "&r"  # Title for the glass item
+      data: 15
+      slots:
+        - "0"
+        - "1"
+        - "2"
+        - "4"
+        - "6"
+        - "7"
+        - "8"
+    servers:
+      eu-hub-1:
+        name: "&b&leu-hub-1"
+        slot: 3
+        material: NETHER_STAR
+        data: 0
+        lore:
+          - "&fStatus: &r%pinger_isonline_localhost:40102%"
+          - "&fPlayers: &b%bungee_eu-hub-1%"
+          - " "
+          - "&fClick to connect to &beu-hub-1&f!"
+        command: "play eu-hub-1"
+      eu-hub-2:
+        name: "&b&leu-hub-2"
+        slot: 5
+        material: NETHER_STAR
+        data: 0
+        lore:
+          - "&fStatus: &r%pinger_isonline_localhost:40109%"
+          - "&fPlayers: &b%bungee_eu-hub-2%"
+          - " "
+          - "&fClick to connect to &beu-hub-2&f!"
+        command: "play eu-hub-2"
+#
+#-------------------------
+#      SubSelector 1
+#-------------------------
+#
+  subselectorone:
+    title: "&bServers » Practice"
+    size: 27
+    servers:
+      na-practice:
+        name: "&b&lNA Practice"
+        slot: 11
+        material: DIAMOND_SWORD
+        data: 0
+        lore:
+          - "&7Proxy: North America"
+          - " "
+          - "&fPlayers: &b%bungee_na-practice%"
+          - " "
+          - "&bClick to view!"
+        command: "play na-practice"
+      eu-practice:
+        name: "&b&lEU Practice"
+        slot: 13
+        material: IRON_SWORD
+        data: 0
+        lore:
+          - "&7Proxy: Europe"
+          - " "
+          - "&fPlayers: &b%bungee_eu-practice%"
+          - " "
+          - "&bClick to play!"
+        command: "play eu-practice"
+      as-practice:
+        name: "&b&lAS Practice"
+        slot: 15
+        material: IRON_SWORD
+        data: 0
+        lore:
+          - "&7Proxy: Asia"
+          - " "
+          - "&fPlayers: &b%bungee_as-practice%"
+          - " "
+          - "&bClick to play!"
+        command: "play eu-practice"
+    refill-glass:
+      enabled: true
+      data: 15
+      slots:
+        - "0"
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
+        - "7"
+        - "8"
+        - "9"
+        - "10"
+        #- "11"
+        - "12"
+        #- "13"
+        - "14"
+        #- "15"
+        - "16"
+        - "17"
+        - "18"
+        - "19"
+        - "20"
+        - "21"
+        - "22"
+        - "23"
+        - "24"
+        - "25"
+        - "26"
+#
+#-------------------------
+#      SubSelector 2
+#-------------------------
+#
+  subselectortwo:
+    title: "&bServers » Minigames"
+    size: 45
+    servers:
+      eu-uhc-1:
+        name: "&b&lUHC"
+        slot: 10
+        material: EYE_OF_ENDER
+        data: 0
+        lore:
+          - "&7No health regen, last player standing"
+          - "&7intense Minecraft survival."
+          - " "
+          - ""
+          - " "
+          - "&cServer Offline"
+        command: "play eu-uhc-1"
+      eu-um-1:
+        name: "&b&lUHC Meetup"
+        slot: 13
+        material: APPLE
+        data: 0
+        lore:
+          - "&7Scattered around UHC map"
+          - "&7Fight with UHC items!"
+          - " "
+          - "&fPlayers: &b%bungee_eu-um-1%"
+          - " "
+          - "&bClick to join!"
+        command: "play eu-um-1"
+      eu-ug-1:
+        name: "&b&lUHC Games"
+        slot: 16
+        material: GOLDEN_APPLE
+        data: 0
+        lore:
+          - "&7UHC-based Survival Games"
+          - " "
+          - "&fPlayers: &b%bungee_eu-ug-1%"
+          - " "
+          - "&bClick to join!"
+        command: "play eu-ug-1"
+      eu-sg-1:
+        name: "&b&lSurvival Games &f&lNEW!"
+        slot: 30
+        material: FISHING_ROD
+        data: 0
+        lore:
+          - "&7New Maps, Season 3, and more"
+          - " "
+          - "&fPlayers: &b%bungee_eu-sg-1%"
+          - " "
+          - "&bClick to join!"
+        command: "play eu-sg-1"
+      eu-psg-1:
+        name: "&b&lPot SG"
+        slot: 32
+        material: POTION
+        data: 16453
+        lore:
+          - "&7An awesome server!"
+          - " "
+          - "&fPlayers: &b%bungee_eu-psg-1%"
+          - " "
+          - "&bClick to join!"
+        command: "play eu-psg-1"
+    refill-glass:
+      enabled: true
+      data: 15
+      slots:
+        - "0"
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
+        - "7"
+        - "8"
+        - "9"
+        #- "10"
+        - "11"
+        - "12"
+        #- "13"
+        - "14"
+        - "15"
+        #- "16"
+        - "17"
+        - "18"
+        - "19"
+        - "20"
+        - "21"
+        - "22"
+        - "23"
+        - "24"
+        - "25"
+        - "26"
+        - "27"
+        - "28"
+        - "29"
+        #- "30"
+        - "31"
+        #- "32"
+        - "33"
+        - "34"
+        - "35"
+        - "36"
+        - "37"
+        - "38"
+        - "39"
+        - "40"
+        - "41"
+        - "42"
+        - "43"
+        - "44"

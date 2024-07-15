@@ -1,0 +1,9 @@
+name: FlowerHub
+version: '${project.version}'
+main: me.emmy.flowerhub.FlowerHub
+author: Emmy
+description: '${project.description}'
+website: https://dsc.gg/emmiesa
+depends:
+  - PlaceholderAPI
+  - ProtocolLib

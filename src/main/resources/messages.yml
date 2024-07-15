@@ -1,0 +1,45 @@
+#
+#
+#               FlowerHub made by Emmiesa | messages.yml
+#
+#
+messages:
+  no-permission: "&cNo permission."
+  reload:
+    - "&r"
+    - "&7[&dFlowerHub&7] &c» Reloading the config files..."
+  reload-finish:
+    - "&7[&dFlowerHub&7] &d» &fSuccessfully reloaded the &dconfig &ffiles! &f(&d%timetaken% ms&f)"
+    - "&r"
+  teleported-to-spawn: "&7[&dFlowerHub&7] &d» &fTeleported you to &dspawn&f!"
+  teleport-spawn-disabled: "&7[&dFlowerHub&7] &cSpawn location is disabled. This means, there is no location set to teleport you to."
+  spawn-set: "&7[&dFlowerHub&7] &d» &fSuccessfully set the &djoin &flocation!"
+  spawn-disabled: "&7[&dFlowerHub&7] &7&oSpawn teleportation is currently disabled. If you want this to take effect, please enable it in the config!"
+  spawn-disabled-console: "Spawn teleport is disabled in the config. Players will not be teleported to the spawn location."
+
+links:
+  register-links: false #If this is false, the commands won't be registered at all, making them completely out of usage.
+  discord:
+    enabled: true
+    enabled_message: "&fDiscord: &bdsc.gg/emmiesa"
+    disabled_message: '&b%link% &fis not one of our socials. Type "/links" for help.'
+  store:
+    enabled: false
+    enabled_message: "&fStore: &bstore.emmiesa.dev"
+    disabled_message: '&b%link% &fis not one of our socials. Type "/links" for help.'
+  tiktok:
+    enabled: false
+    enabled_message: "&fTikTok: &btiktok.com/@emmiesa_dev"
+    disabled_message: '&b%link% &fis not one of our socials. Type "/links" for help.'
+  twitter:
+    enabled: false
+    enabled_message: "&fTwitter: &btwitter.com/EmmiesaDev"
+    disabled_message: '&b%link% &fis not one of our socials. Type "/links" for help.'
+  website:
+    enabled: true
+    enabled_message: "&fWebsite: &bemmiesa.dev"
+    disabled_message: '&b%link% &fis not one of our socials. Type "/links" for help.'
+  youtube:
+    enabled: true
+    enabled_message: "&fYouTube: &byoutube.com/@emmiesa"
+    disabled_message: '&b%link% &fis not one of our socials. Type "/links" for help.'

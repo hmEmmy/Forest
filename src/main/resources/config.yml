@@ -1,0 +1,17 @@
+#
+#
+#               FlowerHub made by Emmiesa | Config.yml
+#
+#
+
+spawn-command:
+  permission: flowerhub.spawncommand
+
+enable-teleport: true #Teleport to the spawn location on join.
+spawnLocation:
+  world: world
+  x: 0.5
+  y: 70.0
+  z: 0.5
+  yaw: 90.0
+  pitch: 0.0
