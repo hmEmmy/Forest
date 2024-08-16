@@ -10,16 +10,16 @@ spawn:
   y: 117.47730945967278
   z: 101.5
   yaw: 0.20455933
-  pitch: -3.8109162
+  pitch: 0.0
 
 pvpmode:
   spawn:
     world: world
     x: 54.5
-    y: 117.47730945967278
-    z: 101.5
-    yaw: 0.20455933
-    pitch: -3.8109162
+    y: 105.37798836699763
+    z: 183.5
+    yaw: 0.2677282
+    pitch: 0.0
 
 players:
   on-join_selected-slot: 4
