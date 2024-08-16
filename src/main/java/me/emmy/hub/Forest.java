@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import me.emmy.hub.commands.ForestCommand;
 import me.emmy.hub.commands.essential.SuggestServerCommand;
+import me.emmy.hub.commands.essential.TogglePlayerVisibilityCommand;
 import me.emmy.hub.feature.menus.hubselector.command.HubSelectorCommand;
 import me.emmy.hub.feature.menus.serverselector.command.ServerSelectorCommand;
 import me.emmy.hub.feature.menus.subselectors.subselectorone.command.SubSelectorOneCommand;
@@ -138,6 +139,7 @@ public class Forest extends JavaPlugin {
 		new JoinPvPModeCommand();
 		new LeavePvPModeCommand();
 		new SetPvPSpawnCommand();
+		new TogglePlayerVisibilityCommand();
 	}
 
 	private void loadTablist() {

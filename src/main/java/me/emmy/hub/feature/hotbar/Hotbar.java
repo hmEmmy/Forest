@@ -1,10 +1,14 @@
 package me.emmy.hub.feature.hotbar;
 
 import lombok.Getter;
+import me.emmy.hub.commands.essential.TogglePlayerVisibilityCommand;
 import me.emmy.hub.utils.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author Emmy
@@ -14,12 +18,61 @@ import org.bukkit.inventory.ItemStack;
 @Getter
 public enum Hotbar {
 
-    PVP_MODE(Material.DIAMOND_SWORD, 0, "joinpvpmode", "&d» PvP Mode « &7(Right Click)", 0),
-    ENDER_BUTT(Material.ENDER_PEARL, 0, "&d» EnderButt « &7(Right Click)", 1),
-    SERVER_SELECTOR(Material.COMPASS, 0, "serverselector", "&d» Server Selector « &7(Right Click)", 4),
-    FIRE_WORK(Material.FIREWORK, 0, "firework", "&d» Firework « &7(Right Click)", 7),
-    COSMETICS(Material.CHEST, 0, "cosmetics", "&d» Cosmetics « &7(Right Click)", 8),
-    //HUB_SELECTOR(Material.BED, 0, "hubselector", "&d» Hub Selector « &7(Right Click)", 0),
+    PVP_MODE(Material.DIAMOND_SWORD, 0, "joinpvpmode", "&d» PvP Mode « &7(Right Click)", 0,
+            Arrays.asList(
+                    "",
+                    "&7Right click to join the PvP mode!",
+                    ""
+            )
+    ),
+
+    ENDER_BUTT(Material.ENDER_PEARL, 0, "&d» EnderButt « &7(Right Click)", 1,
+            Arrays.asList(
+                    "",
+                    "&7Right click to teleport!",
+                    ""
+            )
+    ),
+
+    SERVER_SELECTOR(Material.COMPASS, 0, "serverselector", "&d» Server Selector « &7(Right Click)", 4,
+            Arrays.asList(
+                    "",
+                    "&7Right click to open the server selector!",
+                    ""
+            )
+    ),
+
+    TOGGLE_PLAYER_VISIBILITY(Material.INK_SACK, 8, "tpv", "&d» Toggle Player Visibility  « &7(Right Click)", 6,
+            Arrays.asList(
+                    "",
+                    "&7Right click to hide players!",
+                    ""
+            )
+    ),
+
+    FIRE_WORK(Material.FIREWORK, 0, "firework", "&d» Firework « &7(Right Click)", 7,
+            Arrays.asList(
+                    "",
+                    "&7Right click to launch yourself into the air!",
+                    ""
+            )
+    ),
+
+    COSMETICS(Material.CHEST, 0, "cosmetics", "&d» Cosmetics « &7(Right Click)", 8,
+            Arrays.asList(
+                    "",
+                    "&7Right click to open the cosmetics menu!",
+                    ""
+            )
+    ),
+
+    /*HUB_SELECTOR(Material.BED, 0, "hubselector", "&d» Hub Selector « &7(Right Click)", 0,
+            Arrays.asList(
+                    "",
+                    "&7Right click to open the hub selector!",
+                    ""
+            )
+    )*/
 
     ;
 
@@ -28,6 +81,7 @@ public enum Hotbar {
     private final String command;
     private final String name;
     private final int slot;
+    private final List<String> lore;
 
     /**
      * Constructor for hotbar items (Instantiates a new hotbar item)
@@ -38,12 +92,13 @@ public enum Hotbar {
      * @param name       the name of the hotbar item
      * @param slot       the slot of the hotbar item
      */
-    Hotbar(Material material, int durability, String command, String name, int slot) {
+    Hotbar(Material material, int durability, String command, String name, int slot, List<String> lore) {
         this.material = material;
         this.durability = durability;
         this.command = command;
         this.name = name;
         this.slot = slot;
+        this.lore = lore;
     }
 
     /**
@@ -54,8 +109,8 @@ public enum Hotbar {
      * @param name       the name of the hotbar item
      * @param slot       the slot of the hotbar item
      */
-    Hotbar(Material material, int durability, String name, int slot) {
-        this(material, durability, null, name, slot);
+    Hotbar(Material material, int durability, String name, int slot, List<String> lore) {
+        this(material, durability, null, name, slot, lore);
     }
 
     /**

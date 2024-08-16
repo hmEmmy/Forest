@@ -42,6 +42,7 @@ public class PvPModeRepository {
         PlayerState.setState(player, PlayerState.FIGHTING);
         Forest.getInstance().getCosmeticRepository().unEquipCosmetic(player);
 
+        player.setAllowFlight(false);
         player.getInventory().clear();
         this.applyItems(player);
         player.updateInventory();
@@ -81,6 +82,7 @@ public class PvPModeRepository {
 
         player.getInventory().clear();
         player.getInventory().setArmorContents(null);
+        player.setAllowFlight(true);
 
         Forest.getInstance().getSpawnHandler().teleportToLocation(player);
         Hotbar.applyHotbarItems(player);
