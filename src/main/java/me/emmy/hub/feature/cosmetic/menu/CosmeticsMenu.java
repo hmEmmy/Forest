@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import me.emmy.hub.Forest;
 import me.emmy.hub.feature.cosmetic.Cosmetic;
 import me.emmy.hub.feature.cosmetic.CosmeticRepository;
-import me.emmy.hub.feature.cosmetic.enums.CosmeticType;
 import me.emmy.hub.utils.CC;
 import me.emmy.hub.utils.ItemBuilder;
 import me.emmy.hub.utils.menu.Button;
@@ -15,6 +14,7 @@ import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author Emmy
@@ -37,8 +37,20 @@ public class CosmeticsMenu extends Menu {
 
         int slot = 10;
 
-        for (Cosmetic cosmetic : Forest.getInstance().getCosmeticRepository().getCosmetics()) {
+        List<Cosmetic> sortedCosmetics = Forest.getInstance()
+                .getCosmeticRepository()
+                .getCosmetics()
+                .stream()
+                .sorted(Comparator.comparing(Cosmetic::getName))
+                .sorted(Comparator.comparing(Cosmetic::getType))
+                .collect(Collectors.toList());
+
+        for (Cosmetic cosmetic : sortedCosmetics) {
             buttons.put(slot++, new CosmeticsButton(cosmetic));
+            if (slot == 17 || slot == 26 || slot == 35 || slot == 44) {
+                slot++;
+                slot++;
+            }
         }
 
         return buttons;

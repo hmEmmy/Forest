@@ -34,12 +34,23 @@ public class CosmeticListener implements Listener {
         }
 
         if (cosmeticRepository.isEquipped(player, cosmeticRepository.getCosmetic("Water"))) {
-            ParticleEffect.WATER_SPLASH.display(0.5F, 0.5F, 0.5F, 0.1F, 1, player.getLocation(), 100);
+            ParticleEffect.WATER_SPLASH.display(0.5F, 0.5F, 0.5F, 0.1F, 5, player.getLocation(), 100);
         }
 
         if (cosmeticRepository.isEquipped(player, cosmeticRepository.getCosmetic("Cloud"))) {
             ParticleEffect.CLOUD.display(0.5F, 0.5F, 0.5F, 0.1F, 1, player.getLocation(), 100);
         }
 
+        if (cosmeticRepository.isEquipped(player, cosmeticRepository.getCosmetic("Angry Villager"))) {
+            ParticleEffect.VILLAGER_ANGRY.display(0.5F, 0.5F, 0.5F, 0.1F, 1, player.getLocation(), 100);
+        }
+
+        if (cosmeticRepository.isEquipped(player, cosmeticRepository.getCosmetic("Snow"))) {
+            ParticleEffect.SNOWBALL.display(0.5F, 0.5F, 0.5F, 0.1F, 3, player.getLocation(), 100);
+        }
+
+        if (cosmeticRepository.isEquipped(player, cosmeticRepository.getCosmetic("Snow Storm"))) {
+            ParticleEffect.SNOW_SHOVEL.display(0.5F, 0.5F, 0.5F, 0.1F, 10, player.getLocation(), 100);
+        }
     }
 }

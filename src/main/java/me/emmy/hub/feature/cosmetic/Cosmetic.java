@@ -2,7 +2,6 @@ package me.emmy.hub.feature.cosmetic;
 
 import lombok.Getter;
 import lombok.Setter;
-import me.emmy.hub.feature.cosmetic.enums.CosmeticType;
 import org.bukkit.Material;
 
 /**

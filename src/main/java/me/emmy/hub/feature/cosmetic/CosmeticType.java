@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.cosmetic.enums;
+package me.emmy.hub.feature.cosmetic;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

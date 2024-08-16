@@ -15,6 +15,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.*;
 import org.bukkit.event.weather.WeatherChangeEvent;
 import org.bukkit.inventory.ItemStack;
@@ -44,6 +45,7 @@ public class PlayerListener implements Listener {
 	public void onJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
 		player.getInventory().clear();
+		player.getInventory().setArmorContents(null);
 
 		player.setGameMode(GameMode.SURVIVAL);
 
@@ -200,11 +202,15 @@ public class PlayerListener implements Listener {
 	}
 
 	@EventHandler
-	public void onMoveItem(InventoryClickEvent e) {
-		if (e.getClickedInventory() != null && e.getClickedInventory().equals(e.getWhoClicked().getInventory())) {
+	private void onMoveItem(InventoryClickEvent event) {
+		Player player = (Player) event.getWhoClicked();
+		if (player.getGameMode() == GameMode.SURVIVAL) {
+			if (event.getClickedInventory() != null && event.getClickedInventory().equals(player.getInventory())) {
+				event.setCancelled(true);
+			}
 
-			if (e.getWhoClicked().getGameMode() == GameMode.SURVIVAL) {
-				e.setCancelled(true);
+			if (event.getSlotType() == InventoryType.SlotType.CRAFTING || event.isShiftClick() || event.getClick().isKeyboardClick()) {
+				event.setCancelled(true);
 			}
 		}
 	}
