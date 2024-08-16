@@ -19,6 +19,13 @@ public class Cosmetic {
     private CosmeticType type;
     private Material material;
 
+    /**
+     * @param name        The name of the cosmetic.
+     * @param permission  The permission required to use the cosmetic.
+     * @param description The description of the cosmetic.
+     * @param type        The type of the cosmetic.
+     * @param material    The material of the cosmetic.
+     */
     public Cosmetic(String name, String permission, String description, CosmeticType type, Material material) {
         this.name = name;
         this.permission = permission;
