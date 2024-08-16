@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
  */
 public class LeavePvPModeCommand extends BaseCommand {
     @Override
-    @Command(name = "leavepvpmode", aliases = "leavepvp")
+    @Command(name = "leavepvpmode", aliases = {"leavepvp", "leaveffa"})
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();
 
