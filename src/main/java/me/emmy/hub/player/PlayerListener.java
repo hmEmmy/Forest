@@ -99,7 +99,7 @@ public class PlayerListener implements Listener {
 				player.sendMessage(CC.translate(message));
 		}
 
-		Location spawnLocation = plugin.getLocation();
+		Location spawnLocation = plugin.getSpawnHandler().getLocation();
 
 		if (spawnLocation != null) {
 			event.getPlayer().teleport(spawnLocation);

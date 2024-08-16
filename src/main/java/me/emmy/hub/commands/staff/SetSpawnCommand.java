@@ -5,7 +5,6 @@ import me.emmy.hub.utils.CC;
 import me.emmy.hub.utils.command.BaseCommand;
 import me.emmy.hub.utils.command.Command;
 import me.emmy.hub.utils.command.CommandArgs;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 /**
@@ -21,7 +20,7 @@ public class SetSpawnCommand extends BaseCommand {
 
         boolean enableSpawnTeleport = Forest.getInstance().getConfig().getBoolean("enableSpawnTeleport", true);
 
-        Forest.getInstance().setLocation(player.getLocation());
+        Forest.getInstance().getSpawnHandler().saveLocation(player.getLocation());
         player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.spawn-set")));
 
         if (!enableSpawnTeleport) {

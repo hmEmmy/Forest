@@ -1,5 +1,7 @@
 package me.emmy.hub;
 
+import lombok.Getter;
+import lombok.Setter;
 import me.emmy.hub.commands.ForestCommand;
 import me.emmy.hub.commands.essential.SuggestServerCommand;
 import me.emmy.hub.commands.selectors.HubSelectorCommand;
@@ -17,6 +19,7 @@ import me.emmy.hub.feature.doublejump.DoubleJumpListener;
 import me.emmy.hub.feature.enderbutt.EnderButtListener;
 import me.emmy.hub.feature.fireworklauncher.FireworkLauncherListener;
 import me.emmy.hub.feature.sneakrocket.SneakRocketListener;
+import me.emmy.hub.feature.spawn.SpawnHandler;
 import me.emmy.hub.player.PlayerListener;
 import me.emmy.hub.scoreboard.ScoreboardAdapter;
 import me.emmy.hub.scoreboard.handler.ScoreboardHandler;
@@ -28,18 +31,10 @@ import me.emmy.hub.utils.assemble.Assemble;
 import me.emmy.hub.utils.assemble.AssembleStyle;
 import me.emmy.hub.utils.command.CommandFramework;
 import me.emmy.hub.utils.menu.MenuListener;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import lombok.Setter;
-import lombok.Getter;
 
 import java.io.File;
 import java.util.Arrays;
@@ -54,8 +49,8 @@ public class Forest extends JavaPlugin {
 	private ScoreboardHandler scoreboardHandler;
 	private ConfigHandler configHandler;
 	private CommandFramework commandFramework;
-	private Location location;
 	private CosmeticRepository cosmeticRepository;
+	private SpawnHandler spawnHandler;
 
 	@Override
 	public void onEnable() {
@@ -69,7 +64,6 @@ public class Forest extends JavaPlugin {
 		registerListeners();
 		loadScoreboard();
 		loadTablist();
-		loadSpawnLocation();
 
 		long end = System.currentTimeMillis();
 		long timeTaken = end - start;
@@ -86,6 +80,8 @@ public class Forest extends JavaPlugin {
 		this.configHandler = new ConfigHandler();
 		this.commandFramework = new CommandFramework(this);
 		this.scoreboardHandler = new ScoreboardHandler();
+		this.spawnHandler = new SpawnHandler();
+		this.spawnHandler.loadLocation();
 
 		if (this.getConfig("listeners.yml").getBoolean("world.disable-weather", true)) {
 			WeatherUtil.disableWeatherInAllWorlds();
@@ -130,22 +126,6 @@ public class Forest extends JavaPlugin {
 		new CosmeticsCommand();
 	}
 
-	private void loadSpawnLocation() {
-		FileConfiguration config = configHandler.getConfig("listeners.yml");
-		boolean enableSpawnTeleport = config.getBoolean("spawn.teleporting", true);
-
-		if (enableSpawnTeleport && config.contains("spawn.world")) {
-			World world = Bukkit.getWorld(config.getString("spawn.world"));
-			double x = config.getDouble("spawn.x");
-			double y = config.getDouble("spawn.y");
-			double z = config.getDouble("spawn.z");
-			float yaw = (float) config.getDouble("spawn.yaw");
-			float pitch = (float) config.getDouble("spawn.pitch");
-
-			this.location = new Location(world, x, y, z, yaw, pitch);
-		}
-	}
-
 	private void loadTablist() {
 		if (this.configHandler.getConfig("providers/tablist.yml").getBoolean("TABLIST.ENABLE")) {
 			new Tab(this, new TablistAdapter());
@@ -159,48 +139,6 @@ public class Forest extends JavaPlugin {
 			assemble.setAssembleStyle(AssembleStyle.MODERN);
 		}
 	}
-
-    /**
-     * Teleport a player to the spawn location
-     *
-     * @param player the player to teleport
-     */
-	public void teleportToSpawn(Player player) {
-		FileConfiguration config = configHandler.getConfig("listeners.yml");
-		double x = config.getDouble("spawn.x");
-		double y = config.getDouble("spawn.y");
-		double z = config.getDouble("spawn.z");
-		float yaw = (float) config.getDouble("spawn.yaw");
-		float pitch = (float) config.getDouble("spawn.pitch");
-
-        String worldName = config.getString("spawn.world");
-		World world = Bukkit.getWorld(worldName);
-		if (world == null) {
-			player.sendMessage("The spawn world is not loaded.");
-            return;
-		}
-
-        Location spawnLocation = new Location(world, x, y, z, yaw, pitch);
-        player.teleport(spawnLocation);
-	}
-
-    /**
-     * Set the spawn location and save it to the listeners config
-     *
-     * @param location the location to set the spawn to
-     */
-	public void setLocation(Location location) {
-		this.location = location;
-		FileConfiguration config = configHandler.getConfig("listeners.yml");
-		config.set("spawn.world", location.getWorld().getName());
-		config.set("spawn.x", location.getX());
-		config.set("spawn.y", location.getY());
-		config.set("spawn.z", location.getZ());
-		config.set("spawn.yaw", location.getYaw());
-		config.set("spawn.pitch", location.getPitch());
-		saveConfig();
-	}
-
 
     /**
      * allows you to access a config file provided and reloads it automatically

@@ -27,7 +27,7 @@ public class SpawnCommand extends BaseCommand {
             return;
         }
 
-        Forest.getInstance().teleportToSpawn(player);
+        Forest.getInstance().getSpawnHandler().teleportToLocation(player);
         player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.teleported-to-spawn")));
     }
 }
