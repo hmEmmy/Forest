@@ -9,6 +9,7 @@ import me.emmy.hub.feature.menus.serverselector.command.ServerSelectorCommand;
 import me.emmy.hub.feature.menus.subselectors.subselectorone.command.SubSelectorOneCommand;
 import me.emmy.hub.feature.menus.subselectors.subselectortwo.command.SubSelectorTwoCommand;
 import me.emmy.hub.commands.staff.ReloadCommand;
+import me.emmy.hub.feature.pvpmode.command.admin.SetPvPSpawnCommand;
 import me.emmy.hub.feature.spawn.command.SetSpawnCommand;
 import me.emmy.hub.feature.spawn.command.SpawnCommand;
 import me.emmy.hub.config.ConfigHandler;
@@ -136,6 +137,7 @@ public class Forest extends JavaPlugin {
 		new CosmeticsCommand();
 		new JoinPvPModeCommand();
 		new LeavePvPModeCommand();
+		new SetPvPSpawnCommand();
 	}
 
 	private void loadTablist() {

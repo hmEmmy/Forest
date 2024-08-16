@@ -16,3 +16,4 @@ messages:
   cannot-tp: "&7[&dForest&7] &c» You cannot teleport to spawn while in &dpvp &cmode!"
   left-pvp-mode: "&7[&dForest&7] &d» &fYou have left &dpvp &fmode!"
   joined-pvp-mode: "&7[&dForest&7] &d» &fYou have joined the &dpvp &fmode!"
+  set-pvp-spawn: "&7[&dForest&7] &d» &fSuccessfully set the &dpvp &flocation!"

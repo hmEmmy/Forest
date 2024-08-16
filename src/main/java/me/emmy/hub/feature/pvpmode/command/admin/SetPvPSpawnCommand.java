@@ -1,6 +1,7 @@
 package me.emmy.hub.feature.pvpmode.command.admin;
 
 import me.emmy.hub.Forest;
+import me.emmy.hub.utils.CC;
 import me.emmy.hub.utils.command.BaseCommand;
 import me.emmy.hub.utils.command.Command;
 import me.emmy.hub.utils.command.CommandArgs;
@@ -18,5 +19,6 @@ public class SetPvPSpawnCommand extends BaseCommand {
         Player player = command.getPlayer();
 
         Forest.getInstance().getPvpModeRepository().setPvPSpawn(player.getLocation());
+        player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.set-pvp-spawn")));
     }
 }
