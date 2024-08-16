@@ -12,6 +12,15 @@ spawn:
   yaw: 0.20455933
   pitch: -3.8109162
 
+pvpmode:
+  spawn:
+    world: world
+    x: 54.5
+    y: 117.47730945967278
+    z: 101.5
+    yaw: 0.20455933
+    pitch: -3.8109162
+
 players:
   on-join_selected-slot: 4
   disable_fall-damage: true

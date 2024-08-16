@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.hubselector;
+package me.emmy.hub.feature.menus.hubselector;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.emmy.hub.Forest;

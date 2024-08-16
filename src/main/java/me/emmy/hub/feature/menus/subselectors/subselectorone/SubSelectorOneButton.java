@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.hubselector;
+package me.emmy.hub.feature.menus.subselectors.subselectorone;
 
 import lombok.RequiredArgsConstructor;
 import me.emmy.hub.utils.ItemBuilder;
@@ -17,7 +17,7 @@ import java.util.List;
  * @date 14/08/2024
  */
 @RequiredArgsConstructor
-public class HubSelectButton extends Button {
+public class SubSelectorOneButton extends Button {
 
 	private Material material;
 	private short data;
@@ -25,7 +25,7 @@ public class HubSelectButton extends Button {
 	private List<String> lore;
 	private String command;
 
-	public HubSelectButton(Material material, short data, String displayName, List<String> lore, String command) {
+	public SubSelectorOneButton(Material material, short data, String displayName, List<String> lore, String command) {
 		this.material = material;
 		this.data = data;
 		this.displayName = displayName;
@@ -49,7 +49,7 @@ public class HubSelectButton extends Button {
 	@Override
 	public void clicked(Player player, int slot, ClickType clickType, int hotbarSlot) {
 		if (clickType == ClickType.NUMBER_KEY || clickType == ClickType.SHIFT_LEFT || clickType == ClickType.SHIFT_RIGHT) {
-			new HubSelectorMenu().openMenu(player);
+			new SubSelectorOneMenu().openMenu(player);
 		}
 
 		if (clickType != ClickType.LEFT) {

@@ -2,6 +2,7 @@ package me.emmy.hub.scoreboard;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.emmy.hub.Forest;
+import me.emmy.hub.player.PlayerState;
 import me.emmy.hub.utils.CC;
 import me.emmy.hub.utils.assemble.AssembleAdapter;
 import org.bukkit.Bukkit;
@@ -36,13 +37,25 @@ public class ScoreboardAdapter implements AssembleAdapter {
     @Override
     public List<String> getLines(Player player) {
         List<String> toReturn = new ArrayList<>();
-        for (String line : plugin.getConfigHandler().getConfig("providers/scoreboard.yml").getStringList("scoreboard.lines")) {
-            String replacedLine = PlaceholderAPI.setPlaceholders(player, line);
-            replacedLine = replacedLine.replaceAll("%sidebar%", "&7&m----------------------------")
-                    .replaceAll("%online%", String.valueOf(Bukkit.getOnlinePlayers().size()))
-                    .replaceAll("%max-online%", String.valueOf(Bukkit.getMaxPlayers()));
-            toReturn.add(CC.translate(replacedLine));
+        PlayerState state = PlayerState.getState(player);
+        if (state == PlayerState.FIGHTING) {
+            for (String line : plugin.getConfigHandler().getConfig("providers/scoreboard.yml").getStringList("scoreboard.lines.pvpmode")) {
+                String replacedLine = PlaceholderAPI.setPlaceholders(player, line);
+                replacedLine = replacedLine.replaceAll("%sidebar%", "&7&m----------------------------")
+                        .replaceAll("%online%", String.valueOf(Bukkit.getOnlinePlayers().size()))
+                        .replaceAll("%max-online%", String.valueOf(Bukkit.getMaxPlayers()));
+                toReturn.add(CC.translate(replacedLine));
+            }
+            return toReturn;
+        } else {
+            for (String line : plugin.getConfigHandler().getConfig("providers/scoreboard.yml").getStringList("scoreboard.lines.spawn")) {
+                String replacedLine = PlaceholderAPI.setPlaceholders(player, line);
+                replacedLine = replacedLine.replaceAll("%sidebar%", "&7&m----------------------------")
+                        .replaceAll("%online%", String.valueOf(Bukkit.getOnlinePlayers().size()))
+                        .replaceAll("%max-online%", String.valueOf(Bukkit.getMaxPlayers()));
+                toReturn.add(CC.translate(replacedLine));
+            }
+            return toReturn;
         }
-        return toReturn;
     }
 }

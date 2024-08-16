@@ -4,13 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import me.emmy.hub.commands.ForestCommand;
 import me.emmy.hub.commands.essential.SuggestServerCommand;
-import me.emmy.hub.commands.selectors.HubSelectorCommand;
-import me.emmy.hub.commands.selectors.ServerSelectorCommand;
-import me.emmy.hub.commands.selectors.SubSelectorOneCommand;
-import me.emmy.hub.commands.selectors.SubSelectorTwoCommand;
+import me.emmy.hub.feature.menus.hubselector.command.HubSelectorCommand;
+import me.emmy.hub.feature.menus.serverselector.command.ServerSelectorCommand;
+import me.emmy.hub.feature.menus.subselectors.subselectorone.command.SubSelectorOneCommand;
+import me.emmy.hub.feature.menus.subselectors.subselectortwo.command.SubSelectorTwoCommand;
 import me.emmy.hub.commands.staff.ReloadCommand;
-import me.emmy.hub.commands.staff.SetSpawnCommand;
-import me.emmy.hub.commands.staff.SpawnCommand;
+import me.emmy.hub.feature.spawn.command.SetSpawnCommand;
+import me.emmy.hub.feature.spawn.command.SpawnCommand;
 import me.emmy.hub.config.ConfigHandler;
 import me.emmy.hub.feature.cosmetic.CosmeticRepository;
 import me.emmy.hub.feature.cosmetic.command.CosmeticsCommand;
@@ -18,6 +18,11 @@ import me.emmy.hub.feature.cosmetic.listener.CosmeticListener;
 import me.emmy.hub.feature.doublejump.DoubleJumpListener;
 import me.emmy.hub.feature.enderbutt.EnderButtListener;
 import me.emmy.hub.feature.fireworklauncher.FireworkLauncherListener;
+import me.emmy.hub.feature.hotbar.listener.HotbarListener;
+import me.emmy.hub.feature.pvpmode.PvPModeRepository;
+import me.emmy.hub.feature.pvpmode.command.JoinPvPModeCommand;
+import me.emmy.hub.feature.pvpmode.command.LeavePvPModeCommand;
+import me.emmy.hub.feature.pvpmode.listener.PvPModeListener;
 import me.emmy.hub.feature.sneakrocket.SneakRocketListener;
 import me.emmy.hub.feature.spawn.SpawnHandler;
 import me.emmy.hub.player.PlayerListener;
@@ -51,6 +56,7 @@ public class Forest extends JavaPlugin {
 	private CommandFramework commandFramework;
 	private CosmeticRepository cosmeticRepository;
 	private SpawnHandler spawnHandler;
+	private PvPModeRepository pvpModeRepository;
 
 	@Override
 	public void onEnable() {
@@ -90,17 +96,21 @@ public class Forest extends JavaPlugin {
 
 	private void registerRepositories() {
 		this.cosmeticRepository = new CosmeticRepository();
+		this.pvpModeRepository = new PvPModeRepository();
+		this.pvpModeRepository.loadPvPSpawn();
 	}
 
 	private void registerListeners() {
 		List<Listener> listeners = Arrays.asList(
 				new MenuListener(),
 				new PlayerListener(),
+				new PvPModeListener(),
 				new EnderButtListener(),
 				new DoubleJumpListener(),
 				new FireworkLauncherListener(),
 				new SneakRocketListener(),
-				new CosmeticListener()
+				new CosmeticListener(),
+				new HotbarListener()
 		);
 		for (Listener listener : listeners) {
 			this.getServer().getPluginManager().registerEvents(listener, this);
@@ -124,6 +134,8 @@ public class Forest extends JavaPlugin {
 		new ReloadCommand();
 		new SuggestServerCommand();
 		new CosmeticsCommand();
+		new JoinPvPModeCommand();
+		new LeavePvPModeCommand();
 	}
 
 	private void loadTablist() {

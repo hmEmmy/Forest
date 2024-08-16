@@ -1,6 +1,7 @@
-package me.emmy.hub.commands.staff;
+package me.emmy.hub.feature.spawn.command;
 
 import me.emmy.hub.Forest;
+import me.emmy.hub.player.PlayerState;
 import me.emmy.hub.utils.CC;
 import me.emmy.hub.utils.command.BaseCommand;
 import me.emmy.hub.utils.command.Command;
@@ -17,6 +18,11 @@ public class SpawnCommand extends BaseCommand {
     @Command(name = "spawn")
     public void onCommand(CommandArgs args) {
         Player player = args.getPlayer();
+
+        if (PlayerState.isState(player, PlayerState.FIGHTING)) {
+            player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.cannot-tp")));
+            return;
+        }
 
         if (!player.hasPermission("forest.command.spawn")) {
             player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.no-permission")));

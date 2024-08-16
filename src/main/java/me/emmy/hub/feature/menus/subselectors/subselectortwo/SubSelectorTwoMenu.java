@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.subselectors.subselectorone;
+package me.emmy.hub.feature.menus.subselectors.subselectortwo;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.emmy.hub.Forest;
@@ -21,28 +21,28 @@ import java.util.stream.Collectors;
  * @project Forest
  * @date 14/08/2024
  */
-public class SubSelectorOneMenu extends Menu {
+public class SubSelectorTwoMenu extends Menu {
 
 	private final RefillGlassButton refillGlassButton;
 
-	public SubSelectorOneMenu() {
+	public SubSelectorTwoMenu() {
 		this.refillGlassButton = new RefillGlassButton(
 				Material.STAINED_GLASS_PANE,
-				Forest.getInstance().getConfig("menus.yml").getInt("menus.subselectorone.refill-glass.data", 15),
-				"menus.subselectorone.refill-glass"
+				Forest.getInstance().getConfig("menus.yml").getInt("menus.subselectortwo.refill-glass.data", 15),
+				"menus.subselectortwo.refill-glass"
 		);
 	}
 
 	@Override
 	public String getTitle(Player player) {
-		return CC.translate(Forest.getInstance().getConfig("menus.yml").getString("menus.subselectorone.title"));
+		return CC.translate(Forest.getInstance().getConfig("menus.yml").getString("menus.subselectortwo.title"));
 	}
 
 	@Override
 	public Map<Integer, Button> getButtons(Player player) {
 		Map<Integer, Button> buttons = new HashMap<>();
 
-		ConfigurationSection serversSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectorone.servers");
+		ConfigurationSection serversSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo.servers");
 
 		if (serversSection != null) {
 			for (String serverKey : serversSection.getKeys(false)) {
@@ -58,13 +58,13 @@ public class SubSelectorOneMenu extends Menu {
 					int data = serverSection.getInt("data", 0);
 					Material material = new MaterialData(materialType, (byte) data).toItemStack().getType();
 
-					buttons.put(slot, new SubSelectorOneButton(material, (short) data, name, lore, serverSection.getString("command")));
+					buttons.put(slot, new SubSelectorTwoButton(material, (short) data, name, lore, serverSection.getString("command")));
 				}
 			}
 		}
 
 		// Add refill glass button
-		ConfigurationSection refillGlassSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectorone.refill-glass");
+		ConfigurationSection refillGlassSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo.refill-glass");
 		if (refillGlassSection != null && refillGlassSection.getBoolean("enabled", true)) {
 			List<String> refillSlots = refillGlassSection.getStringList("slots");
 			for (String refillSlot : refillSlots) {
@@ -78,7 +78,7 @@ public class SubSelectorOneMenu extends Menu {
 
 	@Override
 	public int getSize() {
-		ConfigurationSection menuSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectorone");
+		ConfigurationSection menuSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo");
 
 		if (menuSection != null && menuSection.contains("size")) {
 			return menuSection.getInt("size", 9 * 3);

@@ -1,7 +1,6 @@
-package me.emmy.hub.commands.selectors;
+package me.emmy.hub.feature.menus.subselectors.subselectortwo.command;
 
-import com.comphenix.protocol.PacketType;
-import me.emmy.hub.feature.hubselector.HubSelectorMenu;
+import me.emmy.hub.feature.menus.subselectors.subselectortwo.SubSelectorTwoMenu;
 import me.emmy.hub.utils.command.BaseCommand;
 import me.emmy.hub.utils.command.Command;
 import me.emmy.hub.utils.command.CommandArgs;
@@ -12,12 +11,13 @@ import org.bukkit.entity.Player;
  * @project Forest
  * @date 14/08/2024
  */
-public class HubSelectorCommand extends BaseCommand {
+public class SubSelectorTwoCommand extends BaseCommand {
     @Override
-    @Command(name = "hubselector")
+    @Command(name = "subselectortwo")
     public void onCommand(CommandArgs args) {
         Player player = args.getPlayer();
 
-        new HubSelectorMenu().openMenu(player);
+        new SubSelectorTwoMenu().openMenu(player);
     }
 }
+

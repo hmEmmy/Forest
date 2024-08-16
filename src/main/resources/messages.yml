@@ -11,3 +11,8 @@ messages:
   spawn-set: "&7[&dForest&7] &d» &fSuccessfully set the &djoin &flocation!"
   spawn-disabled: "&7[&dForest&7] &7&oSpawn teleportation is currently disabled. If you want this to take effect, please enable it in the config!"
   spawn-disabled-console: "Spawn teleport is disabled in the config. Players will not be teleported to the spawn location."
+  already-in-pvp-mode: "&7[&dForest&7] &c» You are already in &dpvp &cmode!"
+  not-in-pvp-mode: "&7[&dForest&7] &c» You are not in &dpvp &cmode!"
+  cannot-tp: "&7[&dForest&7] &c» You cannot teleport to spawn while in &dpvp &cmode!"
+  left-pvp-mode: "&7[&dForest&7] &d» &fYou have left &dpvp &fmode!"
+  joined-pvp-mode: "&7[&dForest&7] &d» &fYou have joined the &dpvp &fmode!"

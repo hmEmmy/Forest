@@ -1,10 +1,9 @@
-package me.emmy.hub.commands.selectors;
+package me.emmy.hub.feature.menus.subselectors.subselectorone.command;
 
-import me.emmy.hub.feature.subselectors.subselectortwo.SubSelectorTwoMenu;
+import me.emmy.hub.feature.menus.subselectors.subselectorone.SubSelectorOneMenu;
 import me.emmy.hub.utils.command.BaseCommand;
 import me.emmy.hub.utils.command.Command;
 import me.emmy.hub.utils.command.CommandArgs;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 /**
@@ -12,13 +11,12 @@ import org.bukkit.entity.Player;
  * @project Forest
  * @date 14/08/2024
  */
-public class SubSelectorTwoCommand extends BaseCommand {
+public class SubSelectorOneCommand extends BaseCommand {
     @Override
-    @Command(name = "subselectortwo")
+    @Command(name = "subselectorone")
     public void onCommand(CommandArgs args) {
         Player player = args.getPlayer();
 
-        new SubSelectorTwoMenu().openMenu(player);
+        new SubSelectorOneMenu().openMenu(player);
     }
 }
-

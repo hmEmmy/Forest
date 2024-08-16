@@ -1,6 +1,6 @@
-package me.emmy.hub.commands.selectors;
+package me.emmy.hub.feature.menus.hubselector.command;
 
-import me.emmy.hub.feature.serverselector.ServerSelectorMenu;
+import me.emmy.hub.feature.menus.hubselector.HubSelectorMenu;
 import me.emmy.hub.utils.command.BaseCommand;
 import me.emmy.hub.utils.command.Command;
 import me.emmy.hub.utils.command.CommandArgs;
@@ -11,12 +11,12 @@ import org.bukkit.entity.Player;
  * @project Forest
  * @date 14/08/2024
  */
-public class ServerSelectorCommand extends BaseCommand {
+public class HubSelectorCommand extends BaseCommand {
     @Override
-    @Command(name = "serverselector")
+    @Command(name = "hubselector")
     public void onCommand(CommandArgs args) {
         Player player = args.getPlayer();
 
-        new ServerSelectorMenu().openMenu(player);
+        new HubSelectorMenu().openMenu(player);
     }
 }

@@ -1,6 +1,7 @@
 package me.emmy.hub.feature.sneakrocket;
 
 import me.emmy.hub.Forest;
+import me.emmy.hub.player.PlayerState;
 import org.bukkit.Sound;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
@@ -38,12 +39,13 @@ public class SneakRocketListener implements Listener {
     @EventHandler
     public void onSneak(PlayerToggleSneakEvent event) {
         Player player = event.getPlayer();
+        if (PlayerState.isState(player, PlayerState.SPAWN)) {
+            if (enabled && player.getGameMode().name().equalsIgnoreCase("SURVIVAL") && event.isSneaking()) {
+                player.setVelocity(player.getLocation().getDirection().multiply(velocityMultiplier).setY(1));
 
-        if (enabled && player.getGameMode().name().equalsIgnoreCase("SURVIVAL") && event.isSneaking()) {
-            player.setVelocity(player.getLocation().getDirection().multiply(velocityMultiplier).setY(1));
-
-            if (soundEnabled) {
-                player.getWorld().playSound(player.getLocation(), sound, 1.0F, 1.0F);
+                if (soundEnabled) {
+                    player.getWorld().playSound(player.getLocation(), sound, 1.0F, 1.0F);
+                }
             }
         }
     }

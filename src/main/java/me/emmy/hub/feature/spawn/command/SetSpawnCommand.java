@@ -1,4 +1,4 @@
-package me.emmy.hub.commands.staff;
+package me.emmy.hub.feature.spawn.command;
 
 import me.emmy.hub.Forest;
 import me.emmy.hub.utils.CC;
