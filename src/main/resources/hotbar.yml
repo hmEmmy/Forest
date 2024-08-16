@@ -1,9 +1,3 @@
-#
-#
-#               FlowerHub made by Emmiesa | hotbar.yml
-#
-#
-# These are existing items. Consider keeping them, if you don't want them, just do "enabled: false"
 items:
   server_selector:
     enabled: true
@@ -16,37 +10,37 @@ items:
       enabled: false
       command: "thecommand"
   hub_selector:
-    enabled: true
+    enabled: false
     material: NETHER_STAR
     name: '&d» Hub Selector « &7(Right Click)'
     lore:
       - "&dOpens the Hub Selector menu."
     slot: 7
     execute_command: #(execute command instead of opening the regular/built in menu)
-      enabled: false
+      enabled: true
       command: "thecommand"
   enderbutt:
     enabled: true
     name: '&d» EnderButt « &7(Right Click)'
     lore:
       - "&dFly around with an enderpearl."
-    slot: 3
+    slot: 1
   firework:
     enabled: true
     name: '&d» FireWork « &7(Right Click)'
     lore:
       - "&dLaunch yourself into the air!"
-    slot: 5
+    slot: 7
 
 #Dynamically added items. You can create as many as you like.
 dynamic_items:
-  settings:
+  cosmetics:
     enabled: true
-    material: PAPER
-    slot: 1
-    name: '&d» News « &7(Right Click)'
+    material: NETHER_STAR
+    slot: 8
+    name: '&d» Cosmetics « &7(Right Click)'
     execute_command:
       enabled: true
-      command: "news"
+      command: "cosmetics"
     lore:
-      - "&dOpens the News/Changelog Menu"
+      - "&dOpens the Cosmetics menu."

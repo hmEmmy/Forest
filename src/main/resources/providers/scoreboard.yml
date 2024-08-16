@@ -1,44 +1,27 @@
 #
 #
-#               FlowerHub made by Emmiesa | scoreboard.yml
+#               Forest made by hmEmmy | scoreboard.yml
 #
 #
 #
 scoreboard:
   enabled: true
   title:
-    text: "    &d&lFlower Network    "
-    animated: true
+    text: "    &d&lHUB    "
+    animated: false
     ticks: 10
     animation:
-      - "    &f&lFlower Network    "
-      - "    &d&lF&f&llower Network    "
-      - "    &d&lFl&f&lower Network    "
-      - "    &d&lFlo&f&lwer Network    "
-      - "    &d&lFlow&f&ler Network    "
-      - "    &d&lFlowe&f&lr Network    "
-      - "    &d&lFlower&f&l Network    "
-      - "    &d&lFlower &f&lNetwork    "
-      - "    &d&lFlower N&f&letwork    "
-      - "    &d&lFlower Ne&f&ltwork    "
-      - "    &d&lFlower Net&f&lwork    "
-      - "    &d&lFlower Netw&f&lork    "
-      - "    &d&lFlower Netwo&f&lrk    "
-      - "    &d&lFlower Networ&f&lk    "
-      - "    &d&lFlower Network    "
-      - "    &d&lFlower Network    "
-      - "    &d&lFlower Network    "
-      - "    &d&lFlower Network    "
-      - "    &d&lFlower Network    "
-      - "    &d&lFlower Network    "
+      - "    &f&lServer Network    "
+      - "    &d&lServer Network    "
   lines:
-    - " "
+    - "&7&m---------------------"
     - "&d&lInfo"
-    - "&f ➥ &rPlayers: &d%bungee_all%"
-    - "&f ➥ &rRank: &r%flower_rank%"
+    - " &r* Players: &d%bungee_all%"
+    - " &r* Rank: &d%zoom_rank_color%%zoom_rank_name%"
     - " "
-    - "&d&lOnline"
-    - "&f ➥ &rFriends: &d0"
-    - "&f ➥ &rClub: &d0"
+    - "&d&lServers"
+    - " &r* FFA: &aOnline"
+    - " &r* BedWars: &cOffline"
     - " "
-    - "&dflower.club"
+    - "&dserver.club"
+    - "&7&m---------------------"

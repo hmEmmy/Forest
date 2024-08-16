@@ -1,6 +1,6 @@
 #
 #
-#               FlowerHub made by Emmiesa | tablist.yml
+#               Forest made by hmEmmy | tablist.yml
 #
 #
 TABLIST:
@@ -9,9 +9,9 @@ TABLIST:
   PING: -1
   PLAYER_PREFIX: "&a"
   HEADER:
-    - "&dFlowerHub &fwas made by &dEmmiesa&f."
+    - "&d&l&oServer Network"
   FOOTER:
-    - "&fYou're playing &deu-hub-1 &fon &dflower.club&f!"
+    - "&f&l&oYou're connected to &d&l&olobby &f&l&oon &d&l&oserver.club&f&l&o!"
     - ""
   LINES:
     LEFT:
@@ -43,10 +43,10 @@ TABLIST:
         TEXT: ''
         HEAD: ''
       '10':
-        TEXT: '&dKitPvP &f(%bungee_eupractice%)'
+        TEXT: '&dFFA &f(%bungee_ffa%)'
         HEAD: ''
       '11':
-        TEXT: '&dStatus&f: %pinger_isonline_localhost:25565%'
+        TEXT: '&dStatus&f: %pinger_isonline_localhost:25567%'
         HEAD: ''
       '12':
         TEXT: ''
@@ -70,7 +70,7 @@ TABLIST:
         TEXT: '&dDiscord'
         HEAD: '%DISCORD%'
       '19':
-        TEXT: '&fdsc.gg/emmiesa'
+        TEXT: '&fdiscord.gg/server'
         HEAD: ''
       '20':
         TEXT: ''
@@ -80,7 +80,7 @@ TABLIST:
         TEXT: ''
         HEAD: ''
       '2':
-        TEXT: '&dFlower Club'
+        TEXT: '&dServer Network'
         HEAD: ''
       '3':
         TEXT: '&dOnline&f: %bungee_total%/2000'
@@ -92,7 +92,7 @@ TABLIST:
         TEXT: ''
         HEAD: ''
       '6':
-        TEXT: '&dRank&f: %flower_rank_raw%'
+        TEXT: '&dRank&f: &aDefault'
         HEAD: ''
       '7':
         TEXT: ''
@@ -116,10 +116,10 @@ TABLIST:
         TEXT: ''
         HEAD: ''
       '14':
-        TEXT: '&dHubs &f(%math_0:0_{bungee_eu-hub-1}+{bungee_eu-hub-2}%)'
+        TEXT: '&dHubs &f(%math_0:0_{bungee_lobby}+{bungee_lobby-2}%)'
         HEAD: ''
       '15':
-        TEXT: '&dStatus&f: %pinger_isonline_localhost:25577%'
+        TEXT: '&dStatus&f: %pinger_isonline_localhost:25566%'
         HEAD: ''
       '16':
         TEXT: ''
@@ -131,7 +131,7 @@ TABLIST:
         TEXT: '&dStore'
         HEAD: '%STORE%'
       '19':
-        TEXT: '&fstore.flower.club'
+        TEXT: '&fstore.server.club'
         HEAD: ''
       '20':
         TEXT: ''
@@ -165,7 +165,7 @@ TABLIST:
         TEXT: ''
         HEAD: ''
       '10':
-        TEXT: '&dEU Practice&f: (%bungee_eupractice%)'
+        TEXT: '&dPractice&f: (%bungee_eupractice%)'
         HEAD: ''
       '11':
         TEXT: '&dStatus&f: %pinger_isonline_localhost:25565%'
@@ -192,7 +192,7 @@ TABLIST:
         TEXT: '&dTwitter'
         HEAD: '%TWITTER%'
       '19':
-        TEXT: 'twitter.flower.club'
+        TEXT: 'twitter.server.club'
         HEAD: ''
       '20':
         TEXT: ''
@@ -214,25 +214,25 @@ TABLIST:
         TEXT: ''
         HEAD: ''
       '6':
-        TEXT: ''
+        TEXT: '&c[!] Warning [!]'
         HEAD: ''
       '7':
         TEXT: ''
         HEAD: ''
       '8':
-        TEXT: ''
+        TEXT: '&8&m---------------------'
         HEAD: ''
       '9':
-        TEXT: ''
+        TEXT: '&7&oServer is beta testing.'
         HEAD: ''
       '10':
-        TEXT: ''
+        TEXT: '&7&oIf you notice any bugs,'
         HEAD: ''
       '11':
-        TEXT: ''
+        TEXT: '&7&omake sure to report them!'
         HEAD: ''
       '12':
-        TEXT: ''
+        TEXT: '&8&m---------------------'
         HEAD: ''
       '13':
         TEXT: ''
@@ -250,10 +250,10 @@ TABLIST:
         TEXT: ''
         HEAD: ''
       '18':
-        TEXT: '&dWebsite'
+        TEXT: ''
         HEAD: ''
       '19':
-        TEXT: '&fwww.flower.club'
+        TEXT: ''
         HEAD: ''
       '20':
         TEXT: ''

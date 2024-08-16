@@ -1,18 +1,16 @@
-#
-#
-#               FlowerHub made by Emmiesa | listeners.yml
-#
-#
 welcome_message:
-  enabled: true
+  enabled: false
   message:
-    - ''
-    - '&f&l&oWelcome to &b&l&oFlower Network'
-    - ''
-    - ' &f➥ Discord: &bdsc.gg/emmiesa'
-    - ' &f➥ Website: &bwww.flower.club'
-    - ' &f➥ Store: &bstore.flower.club'
-    - ''
+    - ""
+
+spawn:
+  teleporting: true
+  world: world
+  x: 54.5
+  y: 117.47730945967278
+  z: 101.5
+  yaw: 0.20455933
+  pitch: -3.8109162
 
 players:
   on-join_selected-slot: 4
@@ -20,12 +18,12 @@ players:
   disable_item-drop: true
   disable_pick-up-item: true
 
-serverselector: true #Enables /serverselector
-
-hubselector: false #Enables /hubselector
+commands:
+  serverselector: true
+  hubselector: false
 
 world:
-  disable-weather: false
+  disable-weather: true
 
 nametag:
   display_player-health: false

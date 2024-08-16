@@ -1,9 +1,9 @@
-name: FlowerHub
+name: Forest
 version: '${project.version}'
-main: me.emmy.flowerhub.FlowerHub
+main: me.emmy.hub.Forest
 author: Emmy
 description: '${project.description}'
-website: https://dsc.gg/emmiesa
+website: https://discord.gg/U6FTRKycsf
 depends:
   - PlaceholderAPI
   - ProtocolLib
