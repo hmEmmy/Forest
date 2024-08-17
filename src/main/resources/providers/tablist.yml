@@ -3,258 +3,258 @@
 #               Forest made by hmEmmy | tablist.yml
 #
 #
-TABLIST:
-  ENABLE: true
-  TYPE: "CUSTOM" #Available types: VANILLA, CUSTOM
-  PING: -1
-  PLAYER_PREFIX: "&a"
-  HEADER:
+tablist:
+  enabled: true
+  type: "CUSTOM" #Available types: VANILLA, CUSTOM
+  ping: -1
+  player_prefix: "&a"
+  header:
     - "&d&l&oServer Network"
-  FOOTER:
+  footer:
     - "&f&l&oYou're connected to &d&l&olobby &f&l&oon &d&l&oserver.club&f&l&o!"
     - ""
-  LINES:
-    LEFT:
+  lines:
+    left:
       '1':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '2':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '3':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '4':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '5':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '6':
-        TEXT: '&dYou&f: %player_name%'
-        HEAD: '%PLAYER%'
+        text: '&dYou&f: %player_name%'
+        head: '%PLAYER%'
       '7':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '8':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '9':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '10':
-        TEXT: '&dFFA &f(%bungee_ffa%)'
-        HEAD: ''
+        text: '&dFFA &f(%bungee_ffa%)'
+        head: ''
       '11':
-        TEXT: '&dStatus&f: %pinger_isonline_localhost:25567%'
-        HEAD: ''
+        text: '&dStatus&f: %pinger_isonline_localhost:25567%'
+        head: ''
       '12':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '13':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '14':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '15':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '16':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '17':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '18':
-        TEXT: '&dDiscord'
-        HEAD: '%DISCORD%'
+        text: '&dDiscord'
+        head: '%DISCORD%'
       '19':
-        TEXT: '&fdiscord.gg/server'
-        HEAD: ''
+        text: '&fdiscord.gg/server'
+        head: ''
       '20':
-        TEXT: ''
-        HEAD: ''
-    MIDDLE:
+        text: ''
+        head: ''
+    middle:
       '1':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '2':
-        TEXT: '&dServer Network'
-        HEAD: ''
+        text: '&dServer Network'
+        head: ''
       '3':
-        TEXT: '&dOnline&f: %bungee_total%/2000'
-        HEAD: ''
+        text: '&dOnline&f: %bungee_total%/2000'
+        head: ''
       '4':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '5':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '6':
-        TEXT: '&dRank&f: &aDefault'
-        HEAD: ''
+        text: '&dRank&f: &aDefault'
+        head: ''
       '7':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '8':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '9':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '10':
-        TEXT: '&dSkyWars &f(%bungee_SkyWars%)'
-        HEAD: ''
+        text: '&dSkyWars &f(%bungee_SkyWars%)'
+        head: ''
       '11':
-        TEXT: '&dStatus&f: %pinger_isonline_localhost:25565%'
-        HEAD: ''
+        text: '&dStatus&f: %pinger_isonline_localhost:25565%'
+        head: ''
       '12':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '13':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '14':
-        TEXT: '&dHubs &f(%math_0:0_{bungee_lobby}+{bungee_lobby-2}%)'
-        HEAD: ''
+        text: '&dHubs &f(%math_0:0_{bungee_lobby}+{bungee_lobby-2}%)'
+        head: ''
       '15':
-        TEXT: '&dStatus&f: %pinger_isonline_localhost:25566%'
-        HEAD: ''
+        text: '&dStatus&f: %pinger_isonline_localhost:25566%'
+        head: ''
       '16':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '17':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '18':
-        TEXT: '&dStore'
-        HEAD: '%STORE%'
+        text: '&dStore'
+        head: '%STORE%'
       '19':
-        TEXT: '&fstore.server.club'
-        HEAD: ''
+        text: '&fstore.server.club'
+        head: ''
       '20':
-        TEXT: ''
-        HEAD: ''
-    RIGHT:
+        text: ''
+        head: ''
+    right:
       '1':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '2':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '3':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '4':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '5':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '6':
-        TEXT: '&dPing&f: %player_ping%ms'
-        HEAD: ''
+        text: '&dPing&f: %player_ping%ms'
+        head: ''
       '7':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '8':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '9':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '10':
-        TEXT: '&dPractice&f: (%bungee_eupractice%)'
-        HEAD: ''
+        text: '&dPractice&f: (%bungee_eupractice%)'
+        head: ''
       '11':
-        TEXT: '&dStatus&f: %pinger_isonline_localhost:25565%'
-        HEAD: ''
+        text: '&dStatus&f: %pinger_isonline_localhost:25565%'
+        head: ''
       '12':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '13':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '14':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '15':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '16':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '17':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '18':
-        TEXT: '&dTwitter'
-        HEAD: '%TWITTER%'
+        text: '&dTwitter'
+        head: '%TWITTER%'
       '19':
-        TEXT: 'twitter.server.club'
-        HEAD: ''
+        text: 'twitter.server.club'
+        head: ''
       '20':
-        TEXT: ''
-        HEAD: ''
-    FAR_RIGHT:
+        text: ''
+        head: ''
+    far_right:
       '1':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '2':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '3':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '4':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '5':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '6':
-        TEXT: '&c[!] Warning [!]'
-        HEAD: ''
+        text: '&c[!] Warning [!]'
+        head: ''
       '7':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '8':
-        TEXT: '&8&m---------------------'
-        HEAD: ''
+        text: '&8&m---------------------'
+        head: ''
       '9':
-        TEXT: '&7&oServer is beta testing.'
-        HEAD: ''
+        text: '&7&oServer is beta testing.'
+        head: ''
       '10':
-        TEXT: '&7&oIf you notice any bugs,'
-        HEAD: ''
+        text: '&7&oIf you notice any bugs,'
+        head: ''
       '11':
-        TEXT: '&7&omake sure to report them!'
-        HEAD: ''
+        text: '&7&omake sure to report them!'
+        head: ''
       '12':
-        TEXT: '&8&m---------------------'
-        HEAD: ''
+        text: '&8&m---------------------'
+        head: ''
       '13':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '14':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '15':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '16':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '17':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '18':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '19':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''
       '20':
-        TEXT: ''
-        HEAD: ''
+        text: ''
+        head: ''

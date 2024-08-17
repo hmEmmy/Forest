@@ -1,8 +1,7 @@
 package me.emmy.hub.feature.hotbar;
 
 import lombok.Getter;
-import me.emmy.hub.commands.essential.TogglePlayerVisibilityCommand;
-import me.emmy.hub.utils.ItemBuilder;
+import me.emmy.hub.util.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -13,8 +12,8 @@ import java.util.List;
 /**
  * @author Emmy
  * @project Forest
- *  * @date 16/08/2024 - 20:34
- *  */
+ * @date 16/08/2024 - 20:34
+ */
 @Getter
 public enum Hotbar {
 
@@ -50,7 +49,7 @@ public enum Hotbar {
             )
     ),
 
-    FIRE_WORK(Material.FIREWORK, 0, "firework", "&d» Firework « &7(Right Click)", 7,
+    FIRE_WORK(Material.FIREWORK, 0,"&d» Firework « &7(Right Click)", 7,
             Arrays.asList(
                     "",
                     "&7Right click to launch yourself into the air!",
@@ -84,13 +83,14 @@ public enum Hotbar {
     private final List<String> lore;
 
     /**
-     * Constructor for hotbar items (Instantiates a new hotbar item)
+     * Creates a new hotbar item
      *
-     * @param material   the material of the hotbar item
+     * @param material the material of the hotbar item
      * @param durability the durability of the hotbar item
-     * @param command    the command of the hotbar item
-     * @param name       the name of the hotbar item
-     * @param slot       the slot of the hotbar item
+     * @param command the command to execute when the hotbar item is clicked
+     * @param name the name of the hotbar item
+     * @param slot the slot of the hotbar item
+     * @param lore the lore of the hotbar item
      */
     Hotbar(Material material, int durability, String command, String name, int slot, List<String> lore) {
         this.material = material;
@@ -102,12 +102,13 @@ public enum Hotbar {
     }
 
     /**
-     * Constructor for hotbar items without its command (used for enderbutt for example)
+     * Creates a new hotbar item
      *
-     * @param material   the material of the hotbar item
+     * @param material the material of the hotbar item
      * @param durability the durability of the hotbar item
-     * @param name       the name of the hotbar item
-     * @param slot       the slot of the hotbar item
+     * @param name the name of the hotbar item
+     * @param slot the slot of the hotbar item
+     * @param lore the lore of the hotbar item
      */
     Hotbar(Material material, int durability, String name, int slot, List<String> lore) {
         this(material, durability, null, name, slot, lore);

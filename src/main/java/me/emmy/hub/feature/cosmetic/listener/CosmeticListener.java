@@ -1,9 +1,8 @@
 package me.emmy.hub.feature.cosmetic.listener;
 
 import me.emmy.hub.Forest;
-import me.emmy.hub.feature.cosmetic.Cosmetic;
 import me.emmy.hub.feature.cosmetic.CosmeticRepository;
-import me.emmy.hub.utils.ParticleEffect;
+import me.emmy.hub.util.ParticleEffect;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

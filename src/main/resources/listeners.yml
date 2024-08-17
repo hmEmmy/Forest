@@ -4,6 +4,7 @@ welcome_message:
     - ""
 
 spawn:
+  #Teleports on join and allows /spawn for admins
   teleporting: true
   world: world
   x: 54.5

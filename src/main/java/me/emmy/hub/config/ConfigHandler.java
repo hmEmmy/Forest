@@ -2,7 +2,7 @@ package me.emmy.hub.config;
 
 import lombok.Getter;
 import me.emmy.hub.Forest;
-import me.emmy.hub.utils.CC;
+import me.emmy.hub.util.CC;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 

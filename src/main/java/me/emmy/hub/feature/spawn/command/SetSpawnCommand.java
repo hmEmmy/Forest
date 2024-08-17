@@ -1,10 +1,10 @@
 package me.emmy.hub.feature.spawn.command;
 
 import me.emmy.hub.Forest;
-import me.emmy.hub.utils.CC;
-import me.emmy.hub.utils.command.BaseCommand;
-import me.emmy.hub.utils.command.Command;
-import me.emmy.hub.utils.command.CommandArgs;
+import me.emmy.hub.util.CC;
+import me.emmy.hub.api.command.BaseCommand;
+import me.emmy.hub.api.command.Command;
+import me.emmy.hub.api.command.CommandArgs;
 import org.bukkit.entity.Player;
 
 /**

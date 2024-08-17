@@ -5,7 +5,8 @@ import lombok.Setter;
 import me.emmy.hub.Forest;
 import me.emmy.hub.feature.hotbar.Hotbar;
 import me.emmy.hub.player.PlayerState;
-import me.emmy.hub.utils.CC;
+import me.emmy.hub.player.PlayerData;
+import me.emmy.hub.util.CC;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -15,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -79,6 +79,7 @@ public class PvPModeRepository {
         PlayerState.setState(player, PlayerState.SPAWN);
 
         players.remove(player);
+        PlayerData.reset(player);
 
         player.getInventory().clear();
         player.getInventory().setArmorContents(null);
@@ -163,5 +164,14 @@ public class PvPModeRepository {
 
         Location spawnLocation = new Location(world, x, y, z, yaw, pitch);
         player.teleport(spawnLocation);
+    }
+
+    /**
+     * Broadcast a message to all players in the game
+     *
+     * @param string String
+     */
+    public void broadcastPlayers(String string) {
+        players.forEach(player -> player.sendMessage(CC.translate(string)));
     }
 }

@@ -2,13 +2,12 @@ package me.emmy.hub.feature.spawn;
 
 import lombok.Getter;
 import me.emmy.hub.Forest;
-import me.emmy.hub.utils.CC;
+import me.emmy.hub.util.CC;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-
 
 /**
  * @author Emmy

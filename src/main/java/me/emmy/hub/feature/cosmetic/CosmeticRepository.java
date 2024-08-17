@@ -3,8 +3,8 @@ package me.emmy.hub.feature.cosmetic;
 import lombok.Getter;
 import lombok.Setter;
 import me.emmy.hub.Forest;
-import me.emmy.hub.utils.CC;
-import me.emmy.hub.utils.ItemBuilder;
+import me.emmy.hub.util.CC;
+import me.emmy.hub.util.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 

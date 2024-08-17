@@ -2,14 +2,14 @@ package me.emmy.hub;
 
 import lombok.Getter;
 import lombok.Setter;
-import me.emmy.hub.commands.ForestCommand;
-import me.emmy.hub.commands.essential.SuggestServerCommand;
-import me.emmy.hub.commands.essential.TogglePlayerVisibilityCommand;
-import me.emmy.hub.feature.menus.hubselector.command.HubSelectorCommand;
-import me.emmy.hub.feature.menus.serverselector.command.ServerSelectorCommand;
-import me.emmy.hub.feature.menus.subselectors.subselectorone.command.SubSelectorOneCommand;
-import me.emmy.hub.feature.menus.subselectors.subselectortwo.command.SubSelectorTwoCommand;
-import me.emmy.hub.commands.staff.ReloadCommand;
+import me.emmy.hub.command.ForestCommand;
+import me.emmy.hub.command.essential.SuggestServerCommand;
+import me.emmy.hub.command.essential.TogglePlayerVisibilityCommand;
+import me.emmy.hub.menus.hubselector.command.HubSelectorCommand;
+import me.emmy.hub.menus.serverselector.command.ServerSelectorCommand;
+import me.emmy.hub.menus.subselectors.subselectorone.command.SubSelectorOneCommand;
+import me.emmy.hub.menus.subselectors.subselectortwo.command.SubSelectorTwoCommand;
+import me.emmy.hub.command.staff.ReloadCommand;
 import me.emmy.hub.feature.pvpmode.command.admin.SetPvPSpawnCommand;
 import me.emmy.hub.feature.spawn.command.SetSpawnCommand;
 import me.emmy.hub.feature.spawn.command.SpawnCommand;
@@ -28,16 +28,16 @@ import me.emmy.hub.feature.pvpmode.listener.PvPModeListener;
 import me.emmy.hub.feature.sneakrocket.SneakRocketListener;
 import me.emmy.hub.feature.spawn.SpawnHandler;
 import me.emmy.hub.player.PlayerListener;
-import me.emmy.hub.scoreboard.ScoreboardAdapter;
-import me.emmy.hub.scoreboard.handler.ScoreboardHandler;
-import me.emmy.hub.tablist.TablistAdapter;
-import me.emmy.hub.tablist.api.Tab;
-import me.emmy.hub.utils.CC;
-import me.emmy.hub.utils.WeatherUtil;
-import me.emmy.hub.utils.assemble.Assemble;
-import me.emmy.hub.utils.assemble.AssembleStyle;
-import me.emmy.hub.utils.command.CommandFramework;
-import me.emmy.hub.utils.menu.MenuListener;
+import me.emmy.hub.visual.scoreboard.ScoreboardVisualizer;
+import me.emmy.hub.visual.scoreboard.ScoreboardHandler;
+import me.emmy.hub.visual.tablist.TabVisualizer;
+import me.emmy.hub.api.tab.Tab;
+import me.emmy.hub.util.CC;
+import me.emmy.hub.util.WeatherUtil;
+import me.emmy.hub.api.assemble.Assemble;
+import me.emmy.hub.api.assemble.AssembleStyle;
+import me.emmy.hub.api.command.CommandFramework;
+import me.emmy.hub.api.menu.MenuListener;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
@@ -76,12 +76,12 @@ public class Forest extends JavaPlugin {
 		long end = System.currentTimeMillis();
 		long timeTaken = end - start;
 
-		CC.loadPlugin(timeTaken);
+		CC.sendEnableMessage(timeTaken);
 	}
 
 	@Override
 	public void onDisable() {
-		CC.disablePlugin();
+		CC.sendDisableMessage();
 	}
 
 	private void registerHandlers() {
@@ -143,14 +143,14 @@ public class Forest extends JavaPlugin {
 	}
 
 	private void loadTablist() {
-		if (this.configHandler.getConfig("providers/tablist.yml").getBoolean("TABLIST.ENABLE")) {
-			new Tab(this, new TablistAdapter());
+		if (this.configHandler.getConfig("providers/tablist.yml").getBoolean("tablist.enabled")) {
+			new Tab(this, new TabVisualizer());
 		}
 	}
 
 	private void loadScoreboard() {
 		if (this.configHandler.getConfig("providers/scoreboard.yml").getBoolean("scoreboard.enabled")) {
-			Assemble assemble = new Assemble(this, new ScoreboardAdapter());
+			Assemble assemble = new Assemble(this, new ScoreboardVisualizer());
 			assemble.setTicks(2);
 			assemble.setAssembleStyle(AssembleStyle.MODERN);
 		}
