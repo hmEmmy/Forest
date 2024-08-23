@@ -72,36 +72,45 @@
     </repositories>
 
   <dependencies>
+      <!-- Spigot 1.7 -->
+      <dependency>
+          <groupId>spigot.dev</groupId>
+          <artifactId>spigot</artifactId>
+          <version>1.7</version>
+          <scope>system</scope>
+          <systemPath>${project.basedir}/lib/Spigot-1.7.jar</systemPath>
+      </dependency>
+      <!-- Spigot 1.8 -->
       <dependency>
           <groupId>org.papermc</groupId>
           <artifactId>spigot</artifactId>
           <version>1.8.8-R0.1-SNAPSHOT</version>
           <scope>system</scope>
-          <systemPath>${project.basedir}/lib/spigot-1.8.8-R0.1-SNAPSHOT.jar</systemPath>
+          <systemPath>${project.basedir}/lib/Spigot-1.8.jar</systemPath>
       </dependency>
-
+      <!-- Lombok -->
       <dependency>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok</artifactId>
           <version>1.18.12</version>
           <scope>provided</scope>
       </dependency>
-
+      <!-- PlaceholderAPI -->
       <dependency>
           <groupId>me.clip</groupId>
           <artifactId>placeholderapi</artifactId>
           <version>3.8.2</version>
           <scope>system</scope>
-          <systemPath>${project.basedir}/lib/PlaceHolderAPI.jar</systemPath>
+          <systemPath>${project.basedir}/lib/PlaceholderAPI.jar</systemPath>
       </dependency>
-
+        <!-- ProtocolLib -->
       <dependency>
           <groupId>com.comphenix.protocol</groupId>
           <artifactId>ProtocolLib</artifactId>
           <version>4.4.0</version>
           <scope>provided</scope>
       </dependency>
-
+        <!-- ProtocolSupport (Tab API) -->
       <dependency>
           <groupId>dev.hely.protocolsupport</groupId>
           <artifactId>protocolsupport</artifactId>
@@ -109,7 +118,7 @@
           <scope>system</scope>
           <systemPath>${project.basedir}/lib/ProtocolSupport.jar</systemPath>
       </dependency>
-
+      <!-- ViaVersion (Tab API) -->
       <dependency>
           <groupId>dev.hely.viaversion</groupId>
           <artifactId>viaversion</artifactId>
@@ -118,12 +127,5 @@
           <systemPath>${project.basedir}/lib/ViaVersion-2.2.3.jar</systemPath>
       </dependency>
 
-      <dependency>
-          <groupId>spigot.dev</groupId>
-          <artifactId>spigot</artifactId>
-          <version>1.7</version>
-          <scope>system</scope>
-          <systemPath>${project.basedir}/lib/spigot-1.7.jar</systemPath>
-      </dependency>
   </dependencies>
 </project>
