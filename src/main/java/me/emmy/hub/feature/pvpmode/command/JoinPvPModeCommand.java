@@ -20,11 +20,11 @@ public class JoinPvPModeCommand extends BaseCommand {
         Player player = command.getPlayer();
 
         if (PlayerState.isState(player, PlayerState.FIGHTING)) {
-            player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.already-in-pvp-mode")));
+            player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.already-in-pvp-mode")));
             return;
         }
 
         Forest.getInstance().getPvpModeRepository().addPlayer(player);
-        player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.joined-pvp-mode")));
+        player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.joined-pvp-mode")));
     }
 }

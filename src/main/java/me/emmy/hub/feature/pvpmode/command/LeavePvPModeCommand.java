@@ -20,11 +20,11 @@ public class LeavePvPModeCommand extends BaseCommand {
         Player player = command.getPlayer();
 
         if (!PlayerState.isState(player, PlayerState.FIGHTING)) {
-            player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.not-in-pvp-mode")));
+            player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.not-in-pvp-mode")));
             return;
         }
 
         Forest.getInstance().getPvpModeRepository().removePlayer(player);
-        player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.left-pvp-mode")));
+        player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.left-pvp-mode")));
     }
 }

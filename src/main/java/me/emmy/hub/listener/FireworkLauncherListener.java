@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.fireworklauncher;
+package me.emmy.hub.listener;
 
 import me.emmy.hub.Forest;
 import me.emmy.hub.player.PlayerState;
@@ -61,13 +61,13 @@ public class FireworkLauncherListener implements Listener {
 
                     currentFirework.setPassenger(player);
 
-                    if (plugin.getConfig("listeners.yml").getBoolean("fireworklauncher.sound_enabled")) {
-                        String sound = plugin.getConfig("listeners.yml").getString("fireworklauncher.sound");
+                    if (plugin.getConfigHandler().getConfig("settings.yml").getBoolean("fireworklauncher.sound_enabled")) {
+                        String sound = plugin.getConfigHandler().getConfig("settings.yml").getString("fireworklauncher.sound");
                         player.playSound(player.getLocation(), Sound.valueOf(sound), 1.0F, 1.0F);
                     }
 
-                    if (plugin.getConfig("listeners.yml").getBoolean("fireworklauncher.effect_enabled")) {
-                        String effectValue = plugin.getConfig("listeners.yml").getString("fireworklauncher.effect");
+                    if (plugin.getConfigHandler().getConfig("settings.yml").getBoolean("fireworklauncher.effect_enabled")) {
+                        String effectValue = plugin.getConfigHandler().getConfig("settings.yml").getString("fireworklauncher.effect");
                         followEffectTask = (new BukkitRunnable() {
                             public void run() {
                                 if (!player.isOnline() || currentFirework.isDead() || !currentFirework.isValid() || !currentFirework.getPassenger().equals(player)) {

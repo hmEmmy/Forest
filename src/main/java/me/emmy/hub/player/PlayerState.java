@@ -37,6 +37,16 @@ public enum PlayerState {
     }
 
     /**
+     * Get player state name with player object
+     *
+     * @param player Player
+     * @return String
+     */
+    public static String getStateName(Player player) {
+        return getState(player).name();
+    }
+
+    /**
      * Check if player is in a specific state
      *
      * @param player Player

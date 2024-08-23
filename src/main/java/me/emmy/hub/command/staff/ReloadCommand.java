@@ -21,7 +21,7 @@ public class ReloadCommand extends BaseCommand {
 
         long start = System.currentTimeMillis();
 
-        for (String message : Forest.getInstance().getConfig("messages.yml").getStringList("messages.reload")) {
+        for (String message : Forest.getInstance().getConfigHandler().getConfig("messages.yml").getStringList("messages.reload")) {
             sender.sendMessage(CC.translate(message));
         }
 
@@ -30,7 +30,7 @@ public class ReloadCommand extends BaseCommand {
         long end = System.currentTimeMillis();
         long timeTaken = end - start;
 
-        for (String message : Forest.getInstance().getConfig("messages.yml").getStringList("messages.reload-finish")) {
+        for (String message : Forest.getInstance().getConfigHandler().getConfig("messages.yml").getStringList("messages.reload-finish")) {
             sender.sendMessage(CC.translate(message.replace("%timetaken%", String.valueOf(timeTaken))));
         }
 

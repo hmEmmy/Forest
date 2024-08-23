@@ -40,19 +40,19 @@ public class PlayerListener implements Listener {
 		int slot;
 
 		try {
-			slot = Integer.parseInt(plugin.getConfig("listeners.yml").getString("players.on-join_selected-slot"));
+			slot = Integer.parseInt(plugin.getConfigHandler().getConfig("settings.yml").getString("players.on-join_selected-slot"));
 		} catch (NumberFormatException e) {
 			slot = 0;
 		}
 
 		player.getInventory().setHeldItemSlot(slot);
 
-		if (plugin.getConfig("listeners.yml").getBoolean("double_jump.enabled", true)) {
+		if (plugin.getConfigHandler().getConfig("settings.yml").getBoolean("double_jump.enabled", true)) {
 			player.setAllowFlight(true);
 		}
 
-		if (plugin.getConfig("listeners.yml").getBoolean("welcome_message.enabled", true)) {
-			for (String message : plugin.getConfig("listeners.yml").getStringList("welcome_message.message"))
+		if (plugin.getConfigHandler().getConfig("settings.yml").getBoolean("welcome_message.enabled", true)) {
+			for (String message : plugin.getConfigHandler().getConfig("settings.yml").getStringList("welcome_message.message"))
 				player.sendMessage(CC.translate(message));
 		}
 
@@ -77,7 +77,7 @@ public class PlayerListener implements Listener {
 
 	@EventHandler
 	public void onItemDrop(PlayerDropItemEvent event) {
-		if (plugin.getConfig("listeners.yml").getBoolean("players.disable_item-drop", true)) {
+		if (plugin.getConfigHandler().getConfig("settings.yml").getBoolean("players.disable_item-drop", true)) {
 			if (event.getPlayer().getGameMode() == GameMode.SURVIVAL) {
 				event.setCancelled(true);
 			}
@@ -96,7 +96,7 @@ public class PlayerListener implements Listener {
 		}
 
 
-		if (plugin.getConfig("listeners.yml").getBoolean("players.disable_fall-damage", true)) {
+		if (plugin.getConfigHandler().getConfig("settings.yml").getBoolean("players.disable_fall-damage", true)) {
 			event.setCancelled(true);
 		}
 	}
@@ -126,7 +126,7 @@ public class PlayerListener implements Listener {
 	@EventHandler
 	public void onPlayerPickupItem(PlayerPickupItemEvent event) {
 		Player player = event.getPlayer();
-		if (plugin.getConfig("listeners.yml").getBoolean("players.disable_pick-up-item", true)) {
+		if (plugin.getConfigHandler().getConfig("settings.yml").getBoolean("players.disable_pick-up-item", true)) {
 			if (PlayerState.getState(player) == PlayerState.FIGHTING) {
 				return;
 			}
@@ -139,7 +139,7 @@ public class PlayerListener implements Listener {
 
 	@EventHandler
 	public void onWeatherChange(WeatherChangeEvent event) {
-		if (plugin.getConfig("listeners.yml").getBoolean("world.disable-weather", true)) {
+		if (plugin.getConfigHandler().getConfig("settings.yml").getBoolean("world.disable-weather", true)) {
 			event.setCancelled(true);
 		}
 	}

@@ -28,21 +28,21 @@ public class SubSelectorTwoMenu extends Menu {
 	public SubSelectorTwoMenu() {
 		this.refillGlassButton = new RefillGlassButton(
 				Material.STAINED_GLASS_PANE,
-				Forest.getInstance().getConfig("menus.yml").getInt("menus.subselectortwo.refill-glass.data", 15),
+				Forest.getInstance().getConfigHandler().getConfig("menus.yml").getInt("menus.subselectortwo.refill-glass.data", 15),
 				"menus.subselectortwo.refill-glass"
 		);
 	}
 
 	@Override
 	public String getTitle(Player player) {
-		return CC.translate(Forest.getInstance().getConfig("menus.yml").getString("menus.subselectortwo.title"));
+		return CC.translate(Forest.getInstance().getConfigHandler().getConfig("menus.yml").getString("menus.subselectortwo.title"));
 	}
 
 	@Override
 	public Map<Integer, Button> getButtons(Player player) {
 		Map<Integer, Button> buttons = new HashMap<>();
 
-		ConfigurationSection serversSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo.servers");
+		ConfigurationSection serversSection = Forest.getInstance().getConfigHandler().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo.servers");
 
 		if (serversSection != null) {
 			for (String serverKey : serversSection.getKeys(false)) {
@@ -64,7 +64,7 @@ public class SubSelectorTwoMenu extends Menu {
 		}
 
 		// Add refill glass button
-		ConfigurationSection refillGlassSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo.refill-glass");
+		ConfigurationSection refillGlassSection = Forest.getInstance().getConfigHandler().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo.refill-glass");
 		if (refillGlassSection != null && refillGlassSection.getBoolean("enabled", true)) {
 			List<String> refillSlots = refillGlassSection.getStringList("slots");
 			for (String refillSlot : refillSlots) {
@@ -78,7 +78,7 @@ public class SubSelectorTwoMenu extends Menu {
 
 	@Override
 	public int getSize() {
-		ConfigurationSection menuSection = Forest.getInstance().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo");
+		ConfigurationSection menuSection = Forest.getInstance().getConfigHandler().getConfig("menus.yml").getConfigurationSection("menus.subselectortwo");
 
 		if (menuSection != null && menuSection.contains("size")) {
 			return menuSection.getInt("size", 9 * 3);

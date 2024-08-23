@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.sneakrocket;
+package me.emmy.hub.listener;
 
 import me.emmy.hub.Forest;
 import me.emmy.hub.player.PlayerState;
@@ -26,7 +26,7 @@ public class SneakRocketListener implements Listener {
     }
 
     private void loadConfig() {
-        ConfigurationSection configSection = Forest.getInstance().getConfig("listeners.yml").getConfigurationSection("sneak_rocket");
+        ConfigurationSection configSection = Forest.getInstance().getConfigHandler().getConfig("settings.yml").getConfigurationSection("sneak_rocket");
 
         if (configSection != null) {
             enabled = configSection.getBoolean("enabled", true);

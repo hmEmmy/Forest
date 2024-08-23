@@ -26,7 +26,7 @@ public class RefillGlassButton extends Button {
         ItemStack itemStack = new ItemStack(material, 1, data);
         ItemMeta meta = itemStack.getItemMeta();
 
-        String displayName = Forest.getInstance().getConfig("menus.yml").getString(configPath + ".item-title");
+        String displayName = Forest.getInstance().getConfigHandler().getConfig("menus.yml").getString(configPath + ".item-title");
 
         if (displayName != null) {
             meta.setDisplayName(CC.translate(displayName));

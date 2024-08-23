@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.spawn.command;
+package me.emmy.hub.spawn.command;
 
 import me.emmy.hub.Forest;
 import me.emmy.hub.player.PlayerState;
@@ -20,20 +20,20 @@ public class SpawnCommand extends BaseCommand {
         Player player = args.getPlayer();
 
         if (PlayerState.isState(player, PlayerState.FIGHTING)) {
-            player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.cannot-tp")));
+            player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.cannot-tp")));
             return;
         }
 
         if (!player.hasPermission("forest.command.spawn")) {
-            player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.no-permission")));
+            player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.no-permission")));
         }
 
-        if (!Forest.getInstance().getConfigHandler().getConfig("listeners.yml").getBoolean("spawn.teleporting")) {
-            player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.teleport-spawn-disabled")));
+        if (!Forest.getInstance().getConfigHandler().getConfig("settings.yml").getBoolean("spawn.teleporting")) {
+            player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.teleport-spawn-disabled")));
             return;
         }
 
         Forest.getInstance().getSpawnHandler().teleportToLocation(player);
-        player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.teleported-to-spawn")));
+        player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.teleported-to-spawn")));
     }
 }

@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.spawn.command;
+package me.emmy.hub.spawn.command;
 
 import me.emmy.hub.Forest;
 import me.emmy.hub.util.CC;
@@ -18,15 +18,15 @@ public class SetSpawnCommand extends BaseCommand {
     public void onCommand(CommandArgs args) {
         Player player = args.getPlayer();
 
-        boolean enableSpawnTeleport = Forest.getInstance().getConfig().getBoolean("enableSpawnTeleport", true);
+        boolean enableSpawnTeleport = Forest.getInstance().getConfigHandler().getConfig("settings.yml").getBoolean("spawn.teleporting", true);
 
         Forest.getInstance().getSpawnHandler().saveLocation(player.getLocation());
-        player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.spawn-set")));
+        player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.spawn-set")));
 
         if (!enableSpawnTeleport) {
-            player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.spawn-disabled")));
+            player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.spawn-disabled")));
             System.out.println(" ");
-            System.out.println(Forest.getInstance().getConfig("messages.yml").getString("messages.spawn-disabled-console"));
+            System.out.println(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.spawn-disabled-console"));
             System.out.println(" ");
         }
     }

@@ -107,7 +107,7 @@ public class PvPModeRepository {
      * @param location Location
      */
     public void setPvPSpawn(Location location) {
-        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("listeners.yml");
+        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("settings.yml");
         World world = location.getWorld();
 
         config.set("pvpmode.spawn.world", world.getName());
@@ -117,7 +117,7 @@ public class PvPModeRepository {
         config.set("pvpmode.spawn.yaw", location.getYaw());
         config.set("pvpmode.spawn.pitch", location.getPitch());
 
-        Forest.getInstance().getConfigHandler().saveConfig(Forest.getInstance().getConfigHandler().getConfigFile("listeners.yml"), config);
+        Forest.getInstance().getConfigHandler().saveConfig(Forest.getInstance().getConfigHandler().getConfigFile("settings.yml"), config);
         this.spawn = location;
     }
 
@@ -125,7 +125,7 @@ public class PvPModeRepository {
      * Load the PvP spawn location
      */
     public void loadPvPSpawn() {
-        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("listeners.yml");
+        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("settings.yml");
 
         World world = Forest.getInstance().getServer().getWorld(config.getString("pvpmode.spawn.world"));
         if (world == null) {
@@ -148,7 +148,7 @@ public class PvPModeRepository {
      * @param player Player
      */
     public void teleportToPvPSpawn(Player player) {
-        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("listeners.yml");
+        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("settings.yml");
         double x = config.getDouble("pvpmode.spawn.x");
         double y = config.getDouble("pvpmode.spawn.y");
         double z = config.getDouble("pvpmode.spawn.z");

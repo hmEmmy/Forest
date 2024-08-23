@@ -64,7 +64,7 @@ public class CommandFramework implements CommandExecutor {
                     return true;
                 }
                 if (!command.permission().equals("") && (!sender.hasPermission(command.permission()))) {
-                    sender.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.no-permission"))); // TODO change
+                    sender.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.no-permission"))); // TODO change
                     return true;
                 }
                 if (command.inGameOnly() && !(sender instanceof Player)) {
@@ -212,7 +212,7 @@ public class CommandFramework implements CommandExecutor {
                 args.getSender().getServer().dispatchCommand(args.getSender(), command);
             }
         } else {
-            args.getSender().sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("anti-syntax").replace("%argument%", args.getLabel())));
+            args.getSender().sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("anti-syntax").replace("%argument%", args.getLabel())));
         }
     }
 }

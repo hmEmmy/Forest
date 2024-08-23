@@ -22,6 +22,22 @@ pvpmode:
     yaw: 0.2677282
     pitch: 0.0
 
+parkour:
+  start:
+    x: 54.5
+    y: 105.37798836699763
+    z: 183.5
+    yaw: 0.2677282
+    pitch: 0.0
+    world: world
+  end:
+    x: 54.5
+    y: 105.37798836699763
+    z: 183.5
+    yaw: 0.2677282
+    pitch: 0.0
+    world: world
+
 players:
   on-join_selected-slot: 4
   disable_fall-damage: true

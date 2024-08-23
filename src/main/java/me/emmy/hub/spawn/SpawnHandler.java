@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.spawn;
+package me.emmy.hub.spawn;
 
 import lombok.Getter;
 import me.emmy.hub.Forest;
@@ -20,7 +20,7 @@ public class SpawnHandler {
     private Location location;
 
     public void loadLocation() {
-        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("listeners.yml");
+        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("settings.yml");
         boolean enableSpawnTeleport = config.getBoolean("spawn.teleporting", true);
 
         if (enableSpawnTeleport && config.contains("spawn.world")) {
@@ -41,7 +41,7 @@ public class SpawnHandler {
      * @param player the player to teleport
      */
     public void teleportToLocation(Player player) {
-        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("listeners.yml");
+        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("settings.yml");
         double x = config.getDouble("spawn.x");
         double y = config.getDouble("spawn.y");
         double z = config.getDouble("spawn.z");
@@ -66,13 +66,13 @@ public class SpawnHandler {
      */
     public void saveLocation(Location location) {
         this.location = location;
-        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("listeners.yml");
+        FileConfiguration config = Forest.getInstance().getConfigHandler().getConfig("settings.yml");
         config.set("spawn.world", location.getWorld().getName());
         config.set("spawn.x", location.getX());
         config.set("spawn.y", location.getY());
         config.set("spawn.z", location.getZ());
         config.set("spawn.yaw", location.getYaw());
         config.set("spawn.pitch", location.getPitch());
-        Forest.getInstance().getConfigHandler().saveConfig(Forest.getInstance().getConfigHandler().getConfigFile("listeners.yml"), config);
+        Forest.getInstance().getConfigHandler().saveConfig(Forest.getInstance().getConfigHandler().getConfigFile("settings.yml"), config);
     }
 }

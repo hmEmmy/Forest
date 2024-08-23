@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.doublejump;
+package me.emmy.hub.listener;
 
 import me.emmy.hub.Forest;
 import me.emmy.hub.player.PlayerState;
@@ -27,7 +27,7 @@ public class DoubleJumpListener implements Listener {
     }
 
     private void loadConfig() {
-        ConfigurationSection configSection = Forest.getInstance().getConfig("listeners.yml").getConfigurationSection("double_jump");
+        ConfigurationSection configSection = Forest.getInstance().getConfigHandler().getConfig("settings.yml").getConfigurationSection("double_jump");
 
         if (configSection != null) {
             enabled = configSection.getBoolean("enabled", true);

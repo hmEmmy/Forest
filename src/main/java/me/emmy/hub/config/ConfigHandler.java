@@ -23,7 +23,7 @@ public class ConfigHandler {
     private final Map<String, FileConfiguration> fileConfigurations = new HashMap<>();
 
     private final String[] configFileNames = {
-            "listeners.yml", "menus.yml", "messages.yml", "providers/tablist.yml", "providers/scoreboard.yml"
+            "settings.yml", "menus.yml", "messages.yml", "providers/tablist.yml", "providers/scoreboard.yml"
     };
 
     public ConfigHandler() {

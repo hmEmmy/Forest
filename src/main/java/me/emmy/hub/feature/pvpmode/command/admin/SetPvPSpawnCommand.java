@@ -19,6 +19,6 @@ public class SetPvPSpawnCommand extends BaseCommand {
         Player player = command.getPlayer();
 
         Forest.getInstance().getPvpModeRepository().setPvPSpawn(player.getLocation());
-        player.sendMessage(CC.translate(Forest.getInstance().getConfig("messages.yml").getString("messages.set-pvp-spawn")));
+        player.sendMessage(CC.translate(Forest.getInstance().getConfigHandler().getConfig("messages.yml").getString("messages.set-pvp-spawn")));
     }
 }

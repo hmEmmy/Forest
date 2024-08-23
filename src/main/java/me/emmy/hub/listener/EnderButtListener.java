@@ -1,4 +1,4 @@
-package me.emmy.hub.feature.enderbutt;
+package me.emmy.hub.listener;
 
 import me.emmy.hub.Forest;
 import me.emmy.hub.player.PlayerState;
@@ -29,20 +29,20 @@ public class EnderButtListener implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         Action action = event.getAction();
+        Player player = event.getPlayer();
 
         if (PlayerState.isState(event.getPlayer(), PlayerState.SPAWN)) {
-            if (Forest.getInstance().getConfig("listeners.yml").getBoolean("enderbutt.enabled", true)) {
+            if (Forest.getInstance().getConfigHandler().getConfig("settings.yml").getBoolean("enderbutt.enabled", true)) {
                 if (action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK) {
-                    Player player = event.getPlayer();
                     if (event.getItem() != null && event.getItem().getType() == Material.ENDER_PEARL) {
-                        if (Forest.getInstance().getConfig("listeners.yml").getString("enderbutt.type").equals("FOLLOW")) {
+                        if (Forest.getInstance().getConfigHandler().getConfig("settings.yml").getString("enderbutt.type").equals("FOLLOW")) {
                             event.setUseItemInHand(Event.Result.DENY);
                             event.setUseInteractedBlock(Event.Result.DENY);
 
                             player.setVelocity(player.getLocation().getDirection().normalize().multiply(2.5F));
 
-                            if (Forest.getInstance().getConfig("listeners.yml").getBoolean("enderbutt.sound_enabled")) {
-                                String sound = Forest.getInstance().getConfig("listeners.yml").getString("enderbutt.sound");
+                            if (Forest.getInstance().getConfigHandler().getConfig("settings.yml").getBoolean("enderbutt.sound_enabled")) {
+                                String sound = Forest.getInstance().getConfigHandler().getConfig("settings.yml").getString("enderbutt.sound");
                                 player.playSound(player.getLocation(), Sound.valueOf(sound), 1.0F, 1.0F);
                             }
 
@@ -50,7 +50,7 @@ public class EnderButtListener implements Listener {
                                 player.updateInventory();
                             }
 
-                        } else if (Forest.getInstance().getConfig("listeners.yml").getString("enderbutt.type").equals("RIDE")) {
+                        } else if (Forest.getInstance().getConfigHandler().getConfig("settings.yml").getString("enderbutt.type").equals("RIDE")) {
                             event.setCancelled(true);
 
                             if (player.isInsideVehicle()) {
@@ -64,16 +64,16 @@ public class EnderButtListener implements Listener {
                             pearl.setVelocity(player.getLocation().getDirection().normalize().multiply(1.5F));
                             player.spigot().setCollidesWithEntities(false);
 
-                            if (Forest.getInstance().getConfig("listeners.yml").getBoolean("enderbutt.sound_enabled")) {
-                                String sound = Forest.getInstance().getConfig("listeners.yml").getString("enderbutt.sound");
+                            if (Forest.getInstance().getConfigHandler().getConfig("settings.yml").getBoolean("enderbutt.sound_enabled")) {
+                                String sound = Forest.getInstance().getConfigHandler().getConfig("settings.yml").getString("enderbutt.sound");
                                 player.playSound(player.getLocation(), Sound.valueOf(sound), 1.0F, 1.0F);
                             }
 
                             if (player.getGameMode() == GameMode.SURVIVAL || player.getGameMode() == GameMode.CREATIVE) {
                                 player.updateInventory();
                             }
-                            if (Forest.getInstance().getConfig("listeners.yml").getBoolean("enderbutt.effect-ride.enable")) {
-                                String effectValue = Forest.getInstance().getConfig("listeners.yml").getString("enderbutt.effect-ride.effect");
+                            if (Forest.getInstance().getConfigHandler().getConfig("settings.yml").getBoolean("enderbutt.effect-ride.enable")) {
+                                String effectValue = Forest.getInstance().getConfigHandler().getConfig("settings.yml").getString("enderbutt.effect-ride.effect");
                                 followEffectTask = (new BukkitRunnable() {
                                     public void run() {
                                         if (!player.isOnline() || pearl.isDead() || pearl.isOnGround() || !pearl.isValid() || pearl.getPassenger() == null || !pearl.getPassenger().equals(player)) {
