@@ -74,14 +74,14 @@ public class CC {
 	 */
 	public void sendEnableMessage(long timeTaken) {
 		Bukkit.getConsoleSender().sendMessage(" ");
-		Bukkit.getConsoleSender().sendMessage(translate("&d&l" + Forest.getInstance().getDescription().getName()));
-		Bukkit.getConsoleSender().sendMessage(translate(" &f| Author: &d" + Forest.getInstance().getDescription().getAuthors().get(0)));
-		Bukkit.getConsoleSender().sendMessage(translate(" &f| Version: &d" + Forest.getInstance().getDescription().getVersion()));
+		Bukkit.getConsoleSender().sendMessage(translate("&b&l" + Forest.getInstance().getDescription().getName()));
+		Bukkit.getConsoleSender().sendMessage(translate(" &f| Author: &b" + Forest.getInstance().getDescription().getAuthors().get(0)));
+		Bukkit.getConsoleSender().sendMessage(translate(" &f| Version: &b" + Forest.getInstance().getDescription().getVersion()));
 		Bukkit.getConsoleSender().sendMessage(translate(" "));
-		Bukkit.getConsoleSender().sendMessage(translate(" &f| Link: &d" + Forest.getInstance().getDescription().getWebsite()));
-		Bukkit.getConsoleSender().sendMessage(translate(" &f| Description: &d" + Forest.getInstance().getDescription().getDescription()));
+		Bukkit.getConsoleSender().sendMessage(translate(" &f| Link: &b" + Forest.getInstance().getDescription().getWebsite()));
+		Bukkit.getConsoleSender().sendMessage(translate(" &f| Description: &b" + Forest.getInstance().getDescription().getDescription()));
 		Bukkit.getConsoleSender().sendMessage(translate(" "));
-		Bukkit.getConsoleSender().sendMessage(translate(" &f| Load time: &d" + (timeTaken) + " &dms"));
+		Bukkit.getConsoleSender().sendMessage(translate(" &f| Load time: &b" + (timeTaken) + " &bms"));
 		Bukkit.getConsoleSender().sendMessage(" ");
 	}
 
@@ -90,7 +90,7 @@ public class CC {
 	 */
 	public void sendDisableMessage() {
 		Bukkit.getConsoleSender().sendMessage(" ");
-		Bukkit.getConsoleSender().sendMessage(translate("&8[&dForest&8] &7> &fDisabled the &dHubCore&f!"));
+		Bukkit.getConsoleSender().sendMessage(translate("&8[&bForest&8] &7> &fDisabled the &bHubCore&f!"));
 		Bukkit.getConsoleSender().sendMessage(" ");
 	}
 }

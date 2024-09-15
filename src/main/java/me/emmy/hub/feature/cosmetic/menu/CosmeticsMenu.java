@@ -71,19 +71,19 @@ public class CosmeticsMenu extends Menu {
             CosmeticRepository cosmeticRepository = Forest.getInstance().getCosmeticRepository();
             List<String> lore = Arrays.asList(
                     "",
-                    CC.translate("&dDescription:"),
+                    CC.translate("&bDescription:"),
                     CC.translate("&f" + cosmetic.getDescription()),
                     "",
-                    CC.translate("&dType:"),
+                    CC.translate("&bType:"),
                     CC.translate("&f" + cosmetic.getType().getName()),
                     "",
-                    //CC.translate("&dPermission:"),
+                    //CC.translate("&bPermission:"),
                     //CC.translate("&f" + cosmetic.getPermission()),
                     //"",
                     player.hasPermission(cosmetic.getPermission()) ? cosmeticRepository.isEquipped(player, cosmetic) ? CC.translate("&a&lEquipped") : CC.translate("&c&lClick to equip") : CC.translate("&c&lYou don't have permission to equip this Cosmetic!")
             );
             return new ItemBuilder(cosmetic.getMaterial())
-                    .name(CC.translate("&d&l" + cosmetic.getName()))
+                    .name(CC.translate("&b&l" + cosmetic.getName()))
                     .lore(lore)
                     .build();
         }
@@ -104,7 +104,7 @@ public class CosmeticsMenu extends Menu {
 
             CosmeticRepository cosmeticRepository = Forest.getInstance().getCosmeticRepository();
             cosmeticRepository.equipCosmetic(player, cosmetic);
-            player.sendMessage(CC.translate("&dYou've equipped the &f" + cosmetic.getName() + "&d cosmetic!"));
+            player.sendMessage(CC.translate("&bYou've equipped the &f" + cosmetic.getName() + "&b cosmetic!"));
             player.closeInventory();
         }
     }

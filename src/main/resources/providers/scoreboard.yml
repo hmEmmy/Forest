@@ -7,34 +7,34 @@
 scoreboard:
   enabled: true
   title:
-    text: "    &d&lHUB    "
+    text: "    &b&lHUB    "
     animated: false
     ticks: 10
     animation:
       - "    &f&lServer Network    "
-      - "    &d&lServer Network    "
+      - "    &b&lServer Network    "
   lines:
     spawn:
       - "&7&m---------------------"
-      - "&d&lInfo"
-      - " &r* Players: &d%bungee_all%"
-      - " &r* Rank: &d%zoom_rank_color%%zoom_rank_name%"
+      - "&b&lInfo"
+      - " &r* Players: &b%bungee_all%"
+      - " &r* Rank: &b%player_rank%"
       - " "
-      - "&d&lServers"
-      - " &r* FFA: &aOnline"
+      - "&b&lServers"
       - " &r* BedWars: &cOffline"
+      - " &r* Practice: &aOnline"
       - " "
-      - "&dserver.club"
+      - "&bserver.club"
       - "&7&m---------------------"
     pvpmode:
       - "&7&m---------------------"
-      - "&d&lInfo"
-      - " &r* Players: &d%bungee_all%"
-      - " &r* Rank: &d%zoom_rank_color%%zoom_rank_name%"
+      - "&b&lInfo"
+      - " &r* Players: &b%bungee_all%"
+      - " &r* Rank: &b%player_rank%"
       - " "
-      - "&d&lIn PVP Mode"
-      - " &r* Kills: &d%kills%"
-      - " &r* Deaths: &d%deaths%"
+      - "&b&lIn PVP Mode"
+      - " &r* Kills: &b%kills%"
+      - " &r* Deaths: &b%deaths%"
       - " "
-      - "&dserver.club"
+      - "&bserver.club"
       - "&7&m---------------------"

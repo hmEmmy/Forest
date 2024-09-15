@@ -72,14 +72,6 @@
     </repositories>
 
   <dependencies>
-      <!-- Spigot 1.7 -->
-      <dependency>
-          <groupId>spigot.dev</groupId>
-          <artifactId>spigot</artifactId>
-          <version>1.7</version>
-          <scope>system</scope>
-          <systemPath>${project.basedir}/lib/Spigot-1.7.jar</systemPath>
-      </dependency>
       <!-- Spigot 1.8 -->
       <dependency>
           <groupId>org.papermc</groupId>
@@ -87,6 +79,14 @@
           <version>1.8.8-R0.1-SNAPSHOT</version>
           <scope>system</scope>
           <systemPath>${project.basedir}/lib/Spigot-1.8.jar</systemPath>
+      </dependency>
+      <!-- Spigot 1.7 -->
+      <dependency>
+          <groupId>spigot.dev</groupId>
+          <artifactId>spigot</artifactId>
+          <version>1.7</version>
+          <scope>system</scope>
+          <systemPath>${project.basedir}/lib/Spigot-1.7.jar</systemPath>
       </dependency>
       <!-- Lombok -->
       <dependency>

@@ -118,7 +118,7 @@ public class CosmeticRepository {
         }
 
         if (cosmetic.getType() == CosmeticType.HAT) {
-            player.getInventory().setHelmet(new ItemBuilder(cosmetic.getMaterial()).name(CC.translate("&d&l" + cosmetic.getName())).build());
+            player.getInventory().setHelmet(new ItemBuilder(cosmetic.getMaterial()).name(CC.translate("&b&l" + cosmetic.getName())).build());
         }
     }
 

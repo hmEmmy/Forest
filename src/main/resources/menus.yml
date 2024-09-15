@@ -1,12 +1,12 @@
 menus: #These usually do not require a reload. It should update once you save this file and re-open the menu.
-#
-#-------------------------
-#      ServerSelector
-#-------------------------
-#
+  #
+  #-------------------------
+  #      ServerSelector
+  #-------------------------
+  #
   server_selector:
     title: "Server Selector"
-    size: 45 #(9 = 1 ; 18 = 2 ; 27 = 3 ; 36 = 4 ; 45 = 5 ; 54 = 6 ; ect...)
+    size: 27 #(9 = 1 ; 18 = 2 ; 27 = 3 ; 36 = 4 ; 45 = 5 ; 54 = 6 ; ect...)
     refill-glass:
       item-title: ""
       enabled: true
@@ -23,15 +23,15 @@ menus: #These usually do not require a reload. It should update once you save th
         - "8"
         - "9"
         #- "10"
-        #- "11"
+        - "11"
         #- "12"
         - "13"
-        - "14"
+        #- "14"
         - "15"
         #- "16"
         - "17"
         - "18"
-        #- "19"
+        - "19"
         - "20"
         - "21"
         - "22"
@@ -39,28 +39,25 @@ menus: #These usually do not require a reload. It should update once you save th
         - "24"
         - "25"
         - "26"
-        - "27"
-        - "28"
-        - "29"
-        - "30"
-        - "31"
-        - "32"
-        - "33"
-        - "34"
-        - "35"
-        - "36"
-        - "37"
-        - "38"
-        - "39"
-        - "40"
-        - "41"
-        - "42"
-        - "43"
-        - "44"
     servers: #must be called "servers"
-      FFA:
-        name: "&d&lFree For All &a&lNEW!"
+      Practice:
+        name: "&b&lPractice &a&lNew!"
         slot: 10
+        material: DIAMOND_SWORD
+        data: 0
+        lore:
+          - "&7&m------------------------"
+          - "&7&oThe Classic Practice server!"
+          - "&7&oBoxing, NoDebuff, ect..."
+          - " "
+          - "&fPlayers: &b%math_0:0_{bungee_practice}+{bungee_practice-2}%"
+          - " "
+          - "&bClick to join!"
+          - "&7&m------------------------"
+        command: "join practice"
+      FFA:
+        name: "&b&lFree For All &c&lOffline!"
+        slot: 12
         material: DIAMOND_AXE
         data: 0
         lore:
@@ -68,14 +65,14 @@ menus: #These usually do not require a reload. It should update once you save th
           - "&7&oPlay against other players"
           - "&7&oand improve your PvP skills."
           - " "
-          - "&fPlayers: &d%math_0:0_{bungee_ffa}+{bungee_ffa-2}+{bungee_ffa-3}%"
+          - "&fPlayers: &b%math_0:0_{bungee_ffa}+{bungee_ffa-2}+{bungee_ffa-3}%"
           - " "
-          - "&dClick to join!"
+          - "&bClick to join!"
           - "&7&m------------------------"
         command: "join ffa"
       SkyWars:
-        name: "&d&lSkyWars"
-        slot: 11
+        name: "&b&lSkyWars &c&lOffline!"
+        slot: 14
         material: EYE_OF_ENDER
         data: 0
         lore:
@@ -84,14 +81,14 @@ menus: #These usually do not require a reload. It should update once you save th
           - "&7&oon floating islands"
           - "&7&oand be the last one standing."
           - " "
-          - "&fPlayers: &d%math_0:0_{bungee_skywars}+{bungee_skywars-2}%"
+          - "&fPlayers: &b%math_0:0_{bungee_skywars}+{bungee_skywars-2}%"
           - " "
-          - "&dClick to join!"
+          - "&bClick to join!"
           - "&7&m------------------------"
         command: "join skywars"
       BedWars:
-        name: "&d&lBedWars"
-        slot: 12
+        name: "&b&lBedWars &c&lOffline!"
+        slot: 16
         material: BED
         data: 0
         lore:
@@ -100,45 +97,17 @@ menus: #These usually do not require a reload. It should update once you save th
           - "&7&oby breaking their beds"
           - "&7&oto eliminate them."
           - " "
-          - "&fPlayers: &d%math_0:0_{bungee_bedwars}+{bungee_bedwars-2}%"
+          - "&fPlayers: &b%math_0:0_{bungee_bedwars}+{bungee_bedwars-2}%"
           - " "
-          - "&dClick to join!"
+          - "&bClick to join!"
           - "&7&m------------------------"
         command: "join bedwars"
-      "§d§onothing":
-        name: "&c&lRandom Gamemode"
-        slot: 16
-        material: COMPASS
-        data: 0
-        lore:
-          - "&7&m------------------------"
-          - "&7&oClick to spin the wheel"
-          - "&7&oto play a random gamemode!"
-          - " "
-          - "&cClick to spin!"
-          - "&7&m------------------------"
-        command: "suggestserver"
-      Practice:
-        name: "&d&lPractice"
-        slot: 19
-        material: DIAMOND_SWORD
-        data: 0
-        lore:
-          - "&7&m------------------------"
-          - "&7&oThe Classic Practice server!"
-          - "&7&oBoxing, NoDebuff, ect..."
-          - " "
-          - "&fPlayers: &d%math_0:0_{bungee_practice}+{bungee_practice-2}%"
-          - " "
-          - "&dClick to join!"
-          - "&7&m------------------------"
-        command: "join practice"
-#-------------------------
-#      HubSelector
-#-------------------------
-#
+  #-------------------------
+  #      HubSelector
+  #-------------------------
+  #
   hub_selector:
-    title: "&dServers » Hubs"
+    title: "&bServers » Hubs"
     size: 9 #(9 = 1 ; 18 = 2 ; 27 = 3 ; 36 = 4 ; 45 = 5 ; 54 = 6 ; ect...)
     refill-glass:
       enabled: true
@@ -154,71 +123,71 @@ menus: #These usually do not require a reload. It should update once you save th
         - "8"
     servers:
       eu-hub-1:
-        name: "&d&leu-hub-1"
+        name: "&b&leu-hub-1"
         slot: 3
         material: NETHER_STAR
         data: 0
         lore:
           - "&fStatus: &r%pinger_isonline_localhost:40102%"
-          - "&fPlayers: &d%bungee_eu-hub-1%"
+          - "&fPlayers: &b%bungee_eu-hub-1%"
           - " "
-          - "&fClick to connect to &deu-hub-1&f!"
+          - "&fClick to connect to &beu-hub-1&f!"
         command: "play eu-hub-1"
       eu-hub-2:
-        name: "&d&leu-hub-2"
+        name: "&b&leu-hub-2"
         slot: 5
         material: NETHER_STAR
         data: 0
         lore:
           - "&fStatus: &r%pinger_isonline_localhost:40109%"
-          - "&fPlayers: &d%bungee_eu-hub-2%"
+          - "&fPlayers: &b%bungee_eu-hub-2%"
           - " "
-          - "&fClick to connect to &deu-hub-2&f!"
+          - "&fClick to connect to &beu-hub-2&f!"
         command: "play eu-hub-2"
-#
-#-------------------------
-#      SubSelector 1
-#-------------------------
-#
+  #
+  #-------------------------
+  #      SubSelector 1
+  #-------------------------
+  #
   subselectorone:
-    title: "&dServers » Practice"
+    title: "&bServers » Practice"
     size: 27
     servers:
       na-practice:
-        name: "&d&lNA Practice"
+        name: "&b&lNA Practice"
         slot: 11
         material: DIAMOND_SWORD
         data: 0
         lore:
           - "&7Proxy: North America"
           - " "
-          - "&fPlayers: &d%bungee_na-practice%"
+          - "&fPlayers: &b%bungee_na-practice%"
           - " "
-          - "&dClick to view!"
+          - "&bClick to view!"
         command: "play na-practice"
       eu-practice:
-        name: "&d&lEU Practice"
+        name: "&b&lEU Practice"
         slot: 13
         material: IRON_SWORD
         data: 0
         lore:
           - "&7Proxy: Europe"
           - " "
-          - "&fPlayers: &d%bungee_eu-practice%"
+          - "&fPlayers: &b%bungee_eu-practice%"
           - " "
-          - "&dClick to play!"
+          - "&bClick to play!"
         command: "play eu-practice"
       as-practice:
-        name: "&d&lAS Practice"
+        name: "&b&lAS Practice"
         slot: 15
         material: IRON_SWORD
         data: 0
         lore:
           - "&7Proxy: Asia"
           - " "
-          - "&fPlayers: &d%bungee_as-practice%"
+          - "&fPlayers: &b%bungee_as-practice%"
           - " "
-          - "&dClick to play!"
+          - "&bClick to play!"
         command: "play eu-practice"
     refill-glass:
       enabled: true
@@ -251,17 +220,17 @@ menus: #These usually do not require a reload. It should update once you save th
         - "24"
         - "25"
         - "26"
-#
-#-------------------------
-#      SubSelector 2
-#-------------------------
-#
+  #
+  #-------------------------
+  #      SubSelector 2
+  #-------------------------
+  #
   subselectortwo:
-    title: "&dServers » Minigames"
+    title: "&bServers » Minigames"
     size: 45
     servers:
       eu-uhc-1:
-        name: "&d&lUHC"
+        name: "&b&lUHC"
         slot: 10
         material: EYE_OF_ENDER
         data: 0
@@ -274,7 +243,7 @@ menus: #These usually do not require a reload. It should update once you save th
           - "&cServer Offline"
         command: "play eu-uhc-1"
       eu-um-1:
-        name: "&d&lUHC Meetup"
+        name: "&b&lUHC Meetup"
         slot: 13
         material: APPLE
         data: 0
@@ -282,45 +251,45 @@ menus: #These usually do not require a reload. It should update once you save th
           - "&7Scattered around UHC map"
           - "&7Fight with UHC items!"
           - " "
-          - "&fPlayers: &d%bungee_eu-um-1%"
+          - "&fPlayers: &b%bungee_eu-um-1%"
           - " "
-          - "&dClick to join!"
+          - "&bClick to join!"
         command: "play eu-um-1"
       eu-ug-1:
-        name: "&d&lUHC Games"
+        name: "&b&lUHC Games"
         slot: 16
         material: GOLDEN_APPLE
         data: 0
         lore:
           - "&7UHC-based Survival Games"
           - " "
-          - "&fPlayers: &d%bungee_eu-ug-1%"
+          - "&fPlayers: &b%bungee_eu-ug-1%"
           - " "
-          - "&dClick to join!"
+          - "&bClick to join!"
         command: "play eu-ug-1"
       eu-sg-1:
-        name: "&d&lSurvival Games &f&lNEW!"
+        name: "&b&lSurvival Games &f&lNEW!"
         slot: 30
         material: FISHING_ROD
         data: 0
         lore:
           - "&7New Maps, Season 3, and more"
           - " "
-          - "&fPlayers: &d%bungee_eu-sg-1%"
+          - "&fPlayers: &b%bungee_eu-sg-1%"
           - " "
-          - "&dClick to join!"
+          - "&bClick to join!"
         command: "play eu-sg-1"
       eu-psg-1:
-        name: "&d&lPot SG"
+        name: "&b&lPot SG"
         slot: 32
         material: POTION
         data: 16453
         lore:
           - "&7An awesome server!"
           - " "
-          - "&fPlayers: &d%bungee_eu-psg-1%"
+          - "&fPlayers: &b%bungee_eu-psg-1%"
           - " "
-          - "&dClick to join!"
+          - "&bClick to join!"
         command: "play eu-psg-1"
     refill-glass:
       enabled: true

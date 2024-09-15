@@ -9,9 +9,9 @@ tablist:
   ping: -1
   player_prefix: "&a"
   header:
-    - "&d&l&oServer Network"
+    - "&b&l&oServer Network"
   footer:
-    - "&f&l&oYou're connected to &d&l&olobby &f&l&oon &d&l&oserver.club&f&l&o!"
+    - "&f&l&oYou're connected to &b&l&olobby &f&l&oon &b&l&oserver.club&f&l&o!"
     - ""
   lines:
     left:
@@ -31,7 +31,7 @@ tablist:
         text: ''
         head: ''
       '6':
-        text: '&dYou&f: %player_name%'
+        text: '&bYou&f: %player_name%'
         head: '%PLAYER%'
       '7':
         text: ''
@@ -43,10 +43,10 @@ tablist:
         text: ''
         head: ''
       '10':
-        text: '&dFFA &f(%bungee_ffa%)'
+        text: '&bFFA &f(%bungee_ffa%)'
         head: ''
       '11':
-        text: '&dStatus&f: %pinger_isonline_localhost:25567%'
+        text: '&bStatus&f: %pinger_isonline_localhost:25567%'
         head: ''
       '12':
         text: ''
@@ -67,7 +67,7 @@ tablist:
         text: ''
         head: ''
       '18':
-        text: '&dDiscord'
+        text: '&bDiscord'
         head: '%DISCORD%'
       '19':
         text: '&fdiscord.gg/server'
@@ -80,10 +80,10 @@ tablist:
         text: ''
         head: ''
       '2':
-        text: '&dServer Network'
+        text: '&bServer Network'
         head: ''
       '3':
-        text: '&dOnline&f: %bungee_total%/2000'
+        text: '&bOnline&f: %bungee_total%/2000'
         head: ''
       '4':
         text: ''
@@ -92,7 +92,7 @@ tablist:
         text: ''
         head: ''
       '6':
-        text: '&dRank&f: &aDefault'
+        text: '&bRank&f: &aDefault'
         head: ''
       '7':
         text: ''
@@ -104,10 +104,10 @@ tablist:
         text: ''
         head: ''
       '10':
-        text: '&dSkyWars &f(%bungee_SkyWars%)'
+        text: '&bSkyWars &f(%bungee_SkyWars%)'
         head: ''
       '11':
-        text: '&dStatus&f: %pinger_isonline_localhost:25565%'
+        text: '&bStatus&f: %pinger_isonline_localhost:25565%'
         head: ''
       '12':
         text: ''
@@ -116,10 +116,10 @@ tablist:
         text: ''
         head: ''
       '14':
-        text: '&dHubs &f(%math_0:0_{bungee_lobby}+{bungee_lobby-2}%)'
+        text: '&bHubs &f(%math_0:0_{bungee_lobby}+{bungee_lobby-2}%)'
         head: ''
       '15':
-        text: '&dStatus&f: %pinger_isonline_localhost:25566%'
+        text: '&bStatus&f: %pinger_isonline_localhost:25566%'
         head: ''
       '16':
         text: ''
@@ -128,7 +128,7 @@ tablist:
         text: ''
         head: ''
       '18':
-        text: '&dStore'
+        text: '&bStore'
         head: '%STORE%'
       '19':
         text: '&fstore.server.club'
@@ -153,7 +153,7 @@ tablist:
         text: ''
         head: ''
       '6':
-        text: '&dPing&f: %player_ping%ms'
+        text: '&bPing&f: %player_ping%ms'
         head: ''
       '7':
         text: ''
@@ -165,10 +165,10 @@ tablist:
         text: ''
         head: ''
       '10':
-        text: '&dPractice&f: (%bungee_eupractice%)'
+        text: '&bPractice&f: (%bungee_eupractice%)'
         head: ''
       '11':
-        text: '&dStatus&f: %pinger_isonline_localhost:25565%'
+        text: '&bStatus&f: %pinger_isonline_localhost:25565%'
         head: ''
       '12':
         text: ''
@@ -189,7 +189,7 @@ tablist:
         text: ''
         head: ''
       '18':
-        text: '&dTwitter'
+        text: '&bTwitter'
         head: '%TWITTER%'
       '19':
         text: 'twitter.server.club'

@@ -17,7 +17,7 @@ import java.util.List;
 @Getter
 public enum Hotbar {
 
-    PVP_MODE(Material.DIAMOND_SWORD, 0, "joinpvpmode", "&d» PvP Mode « &7(Right Click)", 0,
+    PVP_MODE(Material.DIAMOND_SWORD, 0, "joinpvpmode", "&b» PvP Mode « &7(Right Click)", 0,
             Arrays.asList(
                     "",
                     "&7Right click to join the PvP mode!",
@@ -25,7 +25,7 @@ public enum Hotbar {
             )
     ),
 
-    ENDER_BUTT(Material.ENDER_PEARL, 0, "&d» EnderButt « &7(Right Click)", 1,
+    ENDER_BUTT(Material.ENDER_PEARL, 0, "&b» EnderButt « &7(Right Click)", 1,
             Arrays.asList(
                     "",
                     "&7Right click to teleport!",
@@ -33,7 +33,7 @@ public enum Hotbar {
             )
     ),
 
-    SERVER_SELECTOR(Material.COMPASS, 0, "serverselector", "&d» Server Selector « &7(Right Click)", 4,
+    SERVER_SELECTOR(Material.COMPASS, 0, "serverselector", "&b» Server Selector « &7(Right Click)", 4,
             Arrays.asList(
                     "",
                     "&7Right click to open the server selector!",
@@ -41,7 +41,7 @@ public enum Hotbar {
             )
     ),
 
-    TOGGLE_PLAYER_VISIBILITY(Material.INK_SACK, 8, "tpv", "&d» Toggle Player Visibility  « &7(Right Click)", 6,
+    TOGGLE_PLAYER_VISIBILITY(Material.INK_SACK, 8, "tpv", "&b» Toggle Player Visibility  « &7(Right Click)", 6,
             Arrays.asList(
                     "",
                     "&7Right click to hide players!",
@@ -49,7 +49,7 @@ public enum Hotbar {
             )
     ),
 
-    FIRE_WORK(Material.FIREWORK, 0,"&d» Firework « &7(Right Click)", 7,
+    FIRE_WORK(Material.FIREWORK, 0,"&b» Firework « &7(Right Click)", 7,
             Arrays.asList(
                     "",
                     "&7Right click to launch yourself into the air!",
@@ -57,7 +57,7 @@ public enum Hotbar {
             )
     ),
 
-    COSMETICS(Material.CHEST, 0, "cosmetics", "&d» Cosmetics « &7(Right Click)", 8,
+    COSMETICS(Material.CHEST, 0, "cosmetics", "&b» Cosmetics « &7(Right Click)", 8,
             Arrays.asList(
                     "",
                     "&7Right click to open the cosmetics menu!",
@@ -65,7 +65,7 @@ public enum Hotbar {
             )
     ),
 
-    /*HUB_SELECTOR(Material.BED, 0, "hubselector", "&d» Hub Selector « &7(Right Click)", 0,
+    /*HUB_SELECTOR(Material.BED, 0, "hubselector", "&b» Hub Selector « &7(Right Click)", 0,
             Arrays.asList(
                     "",
                     "&7Right click to open the hub selector!",

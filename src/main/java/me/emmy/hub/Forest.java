@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import me.emmy.hub.command.ForestCommand;
 import me.emmy.hub.command.debug.StateCommand;
-import me.emmy.hub.command.essential.SuggestServerCommand;
 import me.emmy.hub.command.essential.TogglePlayerVisibilityCommand;
 import me.emmy.hub.feature.parkour.ParkourHandler;
 import me.emmy.hub.feature.parkour.command.SetParkourLocationCommand;
@@ -130,7 +129,6 @@ public class Forest extends JavaPlugin {
 		new SubSelectorOneCommand();
 		new SubSelectorTwoCommand();
 		new ReloadCommand();
-		new SuggestServerCommand();
 		new CosmeticsCommand();
 		new JoinPvPModeCommand();
 		new LeavePvPModeCommand();

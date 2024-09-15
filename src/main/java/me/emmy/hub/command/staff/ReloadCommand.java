@@ -34,6 +34,6 @@ public class ReloadCommand extends BaseCommand {
             sender.sendMessage(CC.translate(message.replace("%timetaken%", String.valueOf(timeTaken))));
         }
 
-        Bukkit.getConsoleSender().sendMessage(CC.translate(" &dSuccessfully reloaded all config files in " + timeTaken + "&dms." ));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &bSuccessfully reloaded all config files in " + timeTaken + "&bms." ));
     }
 }
